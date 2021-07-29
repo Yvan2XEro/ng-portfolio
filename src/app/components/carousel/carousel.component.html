@@ -1,17 +1,10 @@
-<mat-carousel timings="250ms ease-in" [autoplay]="true" color="primary" maxWidth="100%" [interval]="5000" [loop]="true"
-    [slides]="25" [hideArrows]="false" [hideIndicators]="false" [useKeyboard]="true" [useMouseWheel]="true"
-    orientation="ltr">
+<mat-carousel timings="250ms ease-in" [autoplay]="true" maxWidth="100%" [interval]="9000" [loop]="true" [slides]="25"
+    [hideArrows]="false" [hideIndicators]="false" [useKeyboard]="true" [useMouseWheel]="true" orientation="ltr">
     <mat-carousel-slide #matCarouselSlide *ngFor="let slide of slides" [image]="slide.url" overlayColor="00000040"
         [hideOverlay]="false">
-        <div class="dynamic-text">
-            <div class="fixed-text">
-                Je
-            </div>
-            <div class="animated-text">
-                <span>Developpe des applications web reactives</span>
-                <!-- <span>Developpe des applications mobiles ultra-rapide</span>
-                <span>Developpe des logiciels d'automatisations</span> -->
-            </div>
+        <div class="text-center-y text-4 text-shadow">
+            <span class="typing">JE DEVELOPPE <span>{{ slide.text | uppercase }}</span></span>
+            <span class="crow">|</span>
         </div>
     </mat-carousel-slide>
 </mat-carousel>

@@ -11,25 +11,23 @@ export class CarouselComponent implements OnInit {
 
   slides = [
     {
-      url: "https://via.placeholder.com/600/92c952"
+      url: "./../../assets/img/aplication-mobile-smartphone.jpg",
+      text: "des application mobiles"
     },
     {
-      url: "https://via.placeholder.com/600/771796"
+      url: "./../../assets/img/application_internet.jpg",
+      text: "des apllications web"
     },
     {
-      url: "https://via.placeholder.com/600/24f355"
-    },
-    {
-      url: "https://via.placeholder.com/600/d32776"
+      url: "./../../assets/img/AdobeStock.jpeg",
+      text: "des logiciels d'automatisation"
     },
   ]
 
   ngOnInit(): void {
-    this.textTyping()
+
   }
-
-  textTyping() {
-
+  private textTyping() {
   }
 
 }
