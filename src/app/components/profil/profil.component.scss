@@ -1,0 +1,40 @@
+.avatar {
+    margin-top: 16px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+.img-circle{
+    border-radius: 50%;
+}
+
+
+table{
+    width: 100%;
+    tr td{
+        text-align: left;
+        font-size: 11px;
+    }
+}
+mat-list-item {
+    color: white;
+}
+
+.scroll-content{
+    overflow: hidden;
+    overflow-y: auto;
+    height: 40%;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    background-color: #1f1f27;
+    padding: 3px;
+}
+p{
+    font-size: 13px;
+}
+mat-divider{
+    width: 95%;
+    background-color: #5f5f79;
+    margin-left: auto;
+    margin-right: auto;
+}
