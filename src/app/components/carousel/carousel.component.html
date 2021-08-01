@@ -1,10 +1,19 @@
-<mat-carousel timings="250ms ease-in" [autoplay]="true" maxWidth="100%" [interval]="9000" [loop]="true" [slides]="25"
-    [hideArrows]="false" [hideIndicators]="false" [useKeyboard]="true" [useMouseWheel]="true" orientation="ltr">
+<mat-carousel *ngIf="carousel.showCarousel$.value" timings="250ms ease-in" [autoplay]="true" maxWidth="100%"
+    [interval]="7750" [loop]="true" [slides]="25" [hideArrows]="false" [hideIndicators]="false" [useKeyboard]="true"
+    [useMouseWheel]="true" orientation="ltr">
     <mat-carousel-slide #matCarouselSlide *ngFor="let slide of slides" [image]="slide.url" overlayColor="00000040"
         [hideOverlay]="false">
-        <div class="text-center-y text-4 text-shadow">
-            <span class="typing">JE DEVELOPPE <span>{{ slide.text | uppercase }}</span></span>
-            <span class="crow">|</span>
+        <div class="text-shadow">
+            <span class="animation-none"></span>
+            <div class="text-center-y text-4">
+                <em class="text-syntax">{{ openingDEV | unescape }} </em><br><br>
+                <p class="typing"> JE DEVELOPPE DES <span class="color-org">{{ slide.text | uppercase }}</span>
+                </p>
+                <span class="crow">|</span><em class="text-syntax">{{ endingDEV | unescape }}</em>
+            </div>
         </div>
     </mat-carousel-slide>
 </mat-carousel>
+<div *ngIf="!carousel.showCarousel$.value" class="mobile-screen primary-theme">
+    <h1> <span class="color-white">WEELCOME <br> </span> IN MY <br><span class="color-red">CODING SPACE</span></h1>
+</div>

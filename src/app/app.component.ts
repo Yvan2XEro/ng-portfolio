@@ -1,3 +1,4 @@
+import { CarouselService } from './shared/services/carousel.service';
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { Component, ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
@@ -14,18 +15,23 @@ export class AppComponent {
   sidenav!: MatSidenav;
   showToolbar = false;
   showSidebar = true
-  constructor(private observer: BreakpointObserver) { }
+  constructor(
+    private observer: BreakpointObserver,
+    public carousel: CarouselService
+  ) { }
 
   ngAfterViewInit() {
     this.observer.observe(['(max-width: 644px)']).subscribe((res) => {
       if (res.matches) {
+        this.carousel.showCarousel$.next(false)
         this.sidenav.mode = 'over';
         this.sidenav.close();
-        this.showToolbar = false
+        this.showToolbar = true
       } else {
+        this.carousel.showCarousel$.next(true)
         this.sidenav.mode = 'side';
         this.sidenav.open();
-        this.showToolbar = true
+        this.showToolbar = false
       }
     });
   }

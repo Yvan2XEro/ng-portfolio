@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "ero-coding-space": {
+      "hosting": {
+        "portfolio": [
+          "ero-coding-space"
+        ]
+      }
+    }
+  }
+}

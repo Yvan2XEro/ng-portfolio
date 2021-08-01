@@ -1,4 +1,4 @@
-<mat-toolbar *ngIf="!showToolbar">
+<mat-toolbar *ngIf="showToolbar" class="primary-theme">
   <button mat-button (click)="showSidebar = !showSidebar">
     <mat-icon>
       {{ showSidebar ? 'menu_open' : 'menu' }}

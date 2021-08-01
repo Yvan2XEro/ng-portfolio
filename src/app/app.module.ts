@@ -1,3 +1,4 @@
+import { environment } from './../environments/environment';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -18,6 +19,9 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { ProfilComponent } from './components/profil/profil.component';
 import { MatCarouselModule } from '@ngbmodule/material-carousel';
 import { CarouselComponent } from './components/carousel/carousel.component';
+import { HTMLEscapeUnescapeModule } from 'html-escape-unescape';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireModule } from '@angular/fire';
 
 @NgModule({
   declarations: [
@@ -28,10 +32,13 @@ import { CarouselComponent } from './components/carousel/carousel.component';
     CarouselComponent,
   ],
   imports: [
-    BrowserModule,
     AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
+    BrowserModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
+    HTMLEscapeUnescapeModule,
     LayoutModule,
     MatCardModule,
     MatToolbarModule,

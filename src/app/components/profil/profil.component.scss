@@ -1,8 +1,12 @@
 .avatar {
-    margin-top: 16px;
+    margin-top: 10px;
     width: 80px;
     height: 80px;
     border-radius: 50%;
+}
+.avatar-icon{
+    width: 30px;
+    height: 30px;
 }
 .img-circle{
     border-radius: 50%;
@@ -21,6 +25,7 @@ mat-list-item {
 }
 
 .scroll-content{
+    border: 0.5px solid #5f5f79;
     overflow: hidden;
     overflow-y: auto;
     height: 40%;
@@ -29,6 +34,7 @@ mat-list-item {
     background-color: #1f1f27;
     padding: 3px;
 }
+*::-webkit-scrollbar { display: none;}
 p{
     font-size: 13px;
 }
@@ -37,4 +43,8 @@ mat-divider{
     background-color: #5f5f79;
     margin-left: auto;
     margin-right: auto;
+}
+.socials-list{
+    padding: 2px;
+    background-color: #191920a2;
 }

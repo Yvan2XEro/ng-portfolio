@@ -1,9 +1,38 @@
+.mobile-screen{
+    width: 100%;
+    box-sizing: border-box;
+    border: .3px solid #2b2b35e3;
+}
+.mobile-screen h1{
+    text-align: center;
+    padding: 10px;
+    font-size: 25px;
+    text-shadow: 1px 1px 3px;
+    z-index: 2;
+}
+.color-red{
+    color: #ff1d1d;
+}
+.text-mobile-screen{
+    font-size: 20px;
+}
 .text-4{
-    font-size: 2.5rem;
+    font-size: 1.5rem;
+}
+.text-15-px{
+    font-size: 15px;
+}
+.pt-45{
+    padding-top: 100px;
+}
+.color-org{
+    color: #ff7b00e3;
+}
+.text-syntax{
+    color: #ff1bd9;
 }
 .text-center-y{
    padding: 100px 0;
-
 }
 .text-shadow{
     text-shadow: 3px 3px 10px black;
@@ -15,19 +44,20 @@
 }
 
 .typing {
-    font-size: 30px;
     width: 0ch;
     height: 100%;
     color: white;
     float: left;
     overflow: hidden;
     white-space: nowrap;
-    animation: typing 4s steps(22) 1s infinite alternate;
-}
-.typing span{
-    color:red;
+    animation: typing 3.5s steps(22) .5s infinite alternate;
 }
 
+.animation-none{
+    animation: none;
+    overflow: none;
+    color: #85f1ffe3;
+}
 .crow {
     float: left;
     color: white;
