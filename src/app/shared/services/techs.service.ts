@@ -1,32 +1,46 @@
+import { Tech } from './../interfaces/Technologie';
+import { AngularFireDatabase, } from '@angular/fire/database';
 import { Injectable } from '@angular/core';
+import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
 
 @Injectable({
   providedIn: 'root'
 })
 export class TechsService {
 
-  constructor() { }
+  private path = 'technologies'
+  techsRef: AngularFirestoreCollection<{name: string, imgUrl: string, state: number, categorie: string}> = this.store.collection(this.path)
+  constructor(
+    private store: AngularFirestore,
+    private angularFireDatabase: AngularFireDatabase
+  ) { }
 
   getAll() {
-    return []
+    return this.techsRef
+  }
+
+  add(data: {name: string, imgUrl: string, state: number, categorie: string}) {
+    return this.store.collection(this.path).add(data)
   }
 
   getAllFrontendFrameworks() {
-    return [
-      {
-        name: "React JS",
-        img: "./../../../assets/img/react.png"
-      }, {
-        name: "Qwik",
-        img: "./../../../assets/img/vue.png"
-      }, {
-        name: "Vue",
-        img: "./../../../assets/img/vue.png"
-      }, {
-        name: "Angular",
-        img: "./../../../assets/img/angular.png"
-      },
-    ]
+
+    return this.store.collection<{name: string, imgUrl: string, state: number, categorie: string}[]>(this.path)
+    // [
+    //   {
+    //     name: "React JS",
+    //     img: "./../../../assets/img/react.png"
+    //   }, {
+    //     name: "Qwik",
+    //     img: "./../../../assets/img/vue.png"
+    //   }, {
+    //     name: "Vue",
+    //     img: "./../../../assets/img/vue.png"
+    //   }, {
+    //     name: "Angular",
+    //     img: "./../../../assets/img/angular.png"
+    //   },
+    // ]
   }
 
   getAllBackendFrameworks() {

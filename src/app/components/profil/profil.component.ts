@@ -1,5 +1,6 @@
 import { TechsService } from './../../shared/services/techs.service';
 import { Component, OnInit } from '@angular/core';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-profil',
@@ -10,9 +11,9 @@ export class ProfilComponent implements OnInit {
 
   age = (new Date()).getFullYear() - 1999
 
-  frontends: { name: string, img: string }[] = []
-  backends: { name: string, img: string }[] = []
-  fmobiles: { name: string, img: string }[] = []
+  frontends: any = []
+  backends: any = []
+  fmobiles: any = []
   socials: { classIcon: string, url: string }[] = [
     {
       classIcon: "fab fa-github",
@@ -40,9 +41,20 @@ export class ProfilComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.frontends = this.techsService.getAllFrontendFrameworks()
-    this.backends = this.techsService.getAllBackendFrameworks()
-    this.fmobiles = this.techsService.getAllMobileFrameworks()
+    this.techsService.getAllFrontendFrameworks().snapshotChanges()
+    .pipe(
+      map(changes =>
+        changes.map(c =>
+          ({ id: c.payload.doc.id, ...c.payload.doc.data() })
+        )
+      )
+    )
+      .subscribe(data => {
+        this.frontends = data
+      })
+
+    this.techsService.getAllBackendFrameworks()
+    this.techsService.getAllMobileFrameworks()
   }
 
 }

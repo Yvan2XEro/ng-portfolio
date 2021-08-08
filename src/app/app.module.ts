@@ -14,6 +14,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatCardModule } from '@angular/material/card';
 import { LayoutModule } from '@angular/cdk/layout';
 import { ProfilComponent } from './components/profil/profil.component';
@@ -22,6 +24,11 @@ import { CarouselComponent } from './components/carousel/carousel.component';
 import { HTMLEscapeUnescapeModule } from 'html-escape-unescape';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireModule } from '@angular/fire';
+import { MatSelectModule } from '@angular/material/select';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+import { AdminComponent } from './pages/admin/admin.component'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -30,26 +37,34 @@ import { AngularFireModule } from '@angular/fire';
     BlogComponent,
     ProfilComponent,
     CarouselComponent,
+    AdminComponent,
   ],
   imports: [
     AppRoutingModule,
+    AngularFireDatabaseModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
+    AngularFireStorageModule,
     BrowserModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
+    FormsModule,
     HTMLEscapeUnescapeModule,
     LayoutModule,
     MatCardModule,
-    MatToolbarModule,
+    MatSelectModule,
     MatSidenavModule,
     MatButtonModule,
     MatIconModule,
+    MatFormFieldModule,
     MatDividerModule,
     MatDividerModule,
     MatExpansionModule,
+    MatInputModule,
     MatListModule,
     MatCarouselModule,
+    ReactiveFormsModule,
+    MatToolbarModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
