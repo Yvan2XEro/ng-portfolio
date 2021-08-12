@@ -1,0 +1,38 @@
+<form (ngSubmit)="submit()">
+  <label for="inputImage">
+    <img [src]="imgSrc" alt="Tech's avatar" width="100px" height="100px">
+  </label>
+  <div>
+    <input type="file" style="display: none;" id="inputImage" (change)="showPreview($event)" formControlName="imageUrl" #inputImage accept="image/*">
+  </div>
+  <div>
+    <mat-form-field>
+      <input matInput placeholder="Level.." name="level" min="0" max="100" [(ngModel)]="level" type="number" required>
+      <mat-error>This field is required!</mat-error>
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field>
+      <input matInput placeholder="Name" name="name" #techs [(ngModel)]="technologie" type="text" required>
+      <mat-error>This field is required!</mat-error>
+    </mat-form-field>
+  </div>
+  <div>
+  <mat-form-field appearance="fill">
+    <mat-label >Cathegorie</mat-label>
+    <mat-select (selectionChange)="changeSelectedCathegorie($event)" [(ngModel)]="categorie">
+      <mat-option value="Backend">Backend</mat-option>
+      <mat-option value="Frontend">Fron-end</mat-option>
+      <mat-option value="Mobile">Mobile</mat-option>
+    </mat-select>
+  </mat-form-field>
+  </div>
+  <div>
+    <button
+      mat-raised-button
+      color="warn"
+      type="submit"
+      [disabled]="technologie=='' || categorie=='' || imgSrc=='assets/img/angular.png'"
+    >Submit</button>
+  </div>
+</form>

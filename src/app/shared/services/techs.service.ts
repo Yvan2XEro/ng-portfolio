@@ -29,24 +29,9 @@ export class TechsService {
     })
   }
 
-  getAllFrontendFrameworks() {
+  getAllTechs() {
 
     return this.store.collection<{name: string, imgUrl: string, state: number, categorie: string}[]>(this.path)
-    // [
-    //   {
-    //     name: "React JS",
-    //     img: "./../../../assets/img/react.png"
-    //   }, {
-    //     name: "Qwik",
-    //     img: "./../../../assets/img/vue.png"
-    //   }, {
-    //     name: "Vue",
-    //     img: "./../../../assets/img/vue.png"
-    //   }, {
-    //     name: "Angular",
-    //     img: "./../../../assets/img/angular.png"
-    //   },
-    // ]
   }
 
   getAllBackendFrameworks() {

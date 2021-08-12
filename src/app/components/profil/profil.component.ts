@@ -38,7 +38,7 @@ export class ProfilComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.techsService.getAllFrontendFrameworks().snapshotChanges()
+    this.techsService.getAllTechs().snapshotChanges()
     .pipe(
       map(changes =>
         changes.map(c =>

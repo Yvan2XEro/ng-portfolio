@@ -18,6 +18,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatCardModule } from '@angular/material/card';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatDialogModule } from '@angular/material/dialog'
 import { LayoutModule } from '@angular/cdk/layout';
 import { ProfilComponent } from './components/profil/profil.component';
 import { MatCarouselModule } from '@ngbmodule/material-carousel';
@@ -31,6 +32,9 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AdminComponent } from './pages/admin/admin.component'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Page404Component } from './pages/page404/page404.component';
+import { InputTechsModalComponent } from './components/input-techs-modal/input-techs-modal.component';
+import { TechsListComponent } from './components/techs-list/techs-list.component';
+import { TechArticlesComponent } from './components/tech-articles/tech-articles.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +45,9 @@ import { Page404Component } from './pages/page404/page404.component';
     CarouselComponent,
     AdminComponent,
     Page404Component,
+    InputTechsModalComponent,
+    TechsListComponent,
+    TechArticlesComponent,
   ],
   imports: [
     AppRoutingModule,
@@ -55,6 +62,7 @@ import { Page404Component } from './pages/page404/page404.component';
     HTMLEscapeUnescapeModule,
     LayoutModule,
     MatCardModule,
+    MatDialogModule,
     MatSelectModule,
     MatSidenavModule,
     MatButtonModule,
@@ -70,7 +78,9 @@ import { Page404Component } from './pages/page404/page404.component';
     MatProgressBarModule,
     MatToolbarModule,
   ],
-  providers: [],
+  providers: [
+    InputTechsModalComponent
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

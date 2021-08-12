@@ -1,0 +1,19 @@
+<h1>Administration</h1>
+<button mat-stroked-button (click)="openEditModale()">Add tech</button>
+<div fxLayout="row wrap" fxLayout.lt-sm="column" fxLayoutGap="32px" fxLayoutAlign="flex-start">
+  <ng-container *ngFor="let t of techs">
+      <mat-card fxFlex="0 1 calc(33.3% - 32px)" class="primary-theme my-2">
+          <img width="50px" class="article-icon" height="50px" [src]="t.imgUrl" alt="img techs" srcset="">
+          <mat-card-header>
+              <mat-card-title>{{t.name}}</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <p class="text-secondary">{{ t.categorie }}</p>
+          </mat-card-content>
+          <mat-card-footer>
+              <button mat-flat-button color="warn"><mat-icon aria-hidden="false" aria-label="Example home icon">delete_outline</mat-icon></button>
+              <button mat-flat-button color="primary"><mat-icon aria-hidden="false" aria-label="Example home icon">edit</mat-icon></button>
+          </mat-card-footer>
+      </mat-card>
+  </ng-container>
+</div>

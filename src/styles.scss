@@ -21,11 +21,11 @@ $app-default-theme: mat-light-theme(
     ),
   )
 );
-.color-white{
-  color: rgb(255, 255, 255);
-}
 .mr-2{
   margin-right: 2px;
+}
+.ml-2{
+  margin-left: 2px;
 }
 .my-2{
     margin-top: 5px;

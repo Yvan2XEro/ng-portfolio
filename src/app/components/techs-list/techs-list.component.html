@@ -1,0 +1,11 @@
+<h3>Backend</h3>
+<mat-list>
+    <mat-list-item *ngFor="let t of techs">
+      <div class="text-secondary">
+        <img class="avatar-icon" [src]="t.imgUrl" alt="">
+        <p class=" techs-name"> {{ t.name }}</p>
+        <p class="fixed-rigth text-white">{{t.state}}%</p>
+      </div>
+        <mat-progress-bar color="primary" mode="determinate" [value]="t.state"></mat-progress-bar>
+    </mat-list-item>
+</mat-list>

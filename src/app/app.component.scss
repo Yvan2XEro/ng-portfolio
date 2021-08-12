@@ -11,16 +11,14 @@ mat-sidenav-content {
 }
 
 mat-sidenav {
-  background-color: #15151b;
-  // height: calc(100vh - 30px);
-  // background: linear-gradient(159deg, #2d2d3a 0%, #2b2b35 100%);
+  // background-color: #15151b;
+  background: linear-gradient(159deg, #2d2d3a 0%, #2b2b35 100%);
   max-width: 250px;
   width: 250px;
-  padding: 16px;
   overflow: hidden;
   height: 100%;
+  padding: 0;
   text-align: center;
-  transition: 0.55s ease-in-out;
 }
 ::-webkit-scrollbar {
   display: none;

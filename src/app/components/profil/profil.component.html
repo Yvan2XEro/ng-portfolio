@@ -26,39 +26,9 @@
     <div class="techs-content">
       <div class="scroll-content">
           <div>
-              <h3>Frontend</h3>
-              <mat-list>
-                  <mat-list-item *ngFor="let t of filterTechs('f')">
-                    <div class="color-white">
-                      <img class="avatar-icon" [src]="t.imgUrl" alt="">
-                      <p class=" techs-name"> {{ t.name }}</p>
-                      <p class="fixed-rigth">{{t.state}}%</p>
-                    </div>
-                      <mat-progress-bar mode="determinate" [value]="t.state"></mat-progress-bar>
-                  </mat-list-item>
-              </mat-list>
-              <h3>Backend</h3>
-              <mat-list>
-                  <mat-list-item *ngFor="let t of filterTechs('b')">
-                    <div class="color-white">
-                      <img class="avatar-icon" [src]="t.imgUrl" alt="">
-                      <p class=" techs-name"> {{ t.name }}</p>
-                      <p class="fixed-rigth">{{t.state}}%</p>
-                    </div>
-                      <mat-progress-bar mode="determinate" [value]="t.state"></mat-progress-bar>
-                  </mat-list-item>
-              </mat-list>
-              <h3>Mobile</h3>
-              <mat-list>
-                  <mat-list-item *ngFor="let t of filterTechs('m')">
-                    <div class="color-white">
-                      <img class="avatar-icon" [src]="t.imgUrl" alt="">
-                      <p class=" techs-name "> {{ t.name }}</p>
-                      <p class="fixed-rigth">{{t.state}}%</p>
-                    </div>
-                      <mat-progress-bar mode="determinate" [value]="t.state"></mat-progress-bar>
-                  </mat-list-item>
-              </mat-list>
+            <app-techs-list title="Frontend" [techs]="filterTechs('f')"></app-techs-list>
+            <app-techs-list title="Backend" [techs]="filterTechs('b')"></app-techs-list>
+            <app-techs-list title="Mobile" [techs]="filterTechs('m')"></app-techs-list>
           </div>
       </div>
     </div>

@@ -1,0 +1,24 @@
+.avatar-icon, .techs-name, .fixed-rigth, .fixed-top{
+  position: absolute;
+}
+.avatar-icon{
+  width: 30px;
+  height: 30px;
+  left: 0;
+  top: 0;
+  display: block;
+}
+.techs-name{
+  left: 40px;
+  top: 5px;
+}
+
+.fixed-rigth{
+  right: 20px;
+  top: 5px;
+}
+
+mat-progress-bar{
+  left: 25px;
+  width: 130px;
+}

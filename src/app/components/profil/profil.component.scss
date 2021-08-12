@@ -4,48 +4,23 @@
     height: 80px;
     border-radius: 50%;
 }
-.avatar-icon, .techs-name, .fixed-rigth, .fixed-top{
-  position: absolute;
-}
+
 $bg-color: linear-gradient(159deg, rgba(37, 37, 50, 0.98) 0%, rgba(35, 35, 45, 0.98) 100%);
 $profile-height: 300pxpx;
 .fixed-top{
   top: 0;
-  left: 0px;
+  left: 0;
   width: 100%;
   height: $profile-height;
-  opacity: 1;
-  z-index: 2;
   background: $bg-color;
   scrollbar-width: none;
-}
-.avatar-icon{
-    width: 30px;
-    height: 30px;
-    left: 0;
-    top: 0;
-    display: block;
-}
-.fixed-rigth{
-  right: 20px;
-  top: 5px;
-}
-mat-progress-bar{
-  left: 25px;
-  width: 130px;
-}
-.techs-name{
-  left: 40px;
-  top: 5px;
 }
 .img-circle{
     border-radius: 50%;
 }
-
 mat-list-item {
     color: white;
 }
-
 .scroll-content{
     overflow-y: auto;
     position: fixed;
