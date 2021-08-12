@@ -1,13 +1,14 @@
 import { map } from 'rxjs/operators';
 import { TechsService } from './../../shared/services/techs.service';
 import { InputTechsModalComponent } from './../input-techs-modal/input-techs-modal.component';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-tech-articles',
   templateUrl: './tech-articles.component.html',
-  styleUrls: ['./tech-articles.component.scss']
+  styleUrls: ['./tech-articles.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class TechArticlesComponent implements OnInit {
   techs: any[] = []
@@ -30,7 +31,11 @@ export class TechArticlesComponent implements OnInit {
       })
   }
   openEditModale(){
-    const dialogRef = this.matDialog.open(InputTechsModalComponent)
+    const dialogRef = this.matDialog.open(InputTechsModalComponent,{
+      panelClass: 'primary-theme',
+      maxWidth: '250px',
+      width: '250px'
+    })
     dialogRef.afterClosed().subscribe(()=>{this.ngOnInit()})
   }
 }

@@ -31,6 +31,10 @@ $app-default-theme: mat-light-theme(
     margin-top: 5px;
     margin-bottom: 5px;
 }
+
+.p-0{
+  padding: 0;
+}
 .text-white{
   color: white;
 }
@@ -64,5 +68,12 @@ $app-default-theme: mat-light-theme(
     background: linear-gradient(159deg, #2d2d3a 0%, #2b2b35 100%);
     opacity: 0.9;
     color: white;
+}
+.form-control{
+  display: block;
+  width: 100%;
+}
+.app-input{
+  height: 45px;
 }
 // @include angular-material-theme($app-default-theme);

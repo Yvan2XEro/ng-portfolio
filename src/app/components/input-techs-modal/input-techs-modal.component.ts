@@ -2,6 +2,7 @@ import { finalize } from 'rxjs/operators';
 import { TechsService } from './../../shared/services/techs.service';
 import { AngularFireStorage } from '@angular/fire/storage';
 import { Component, OnInit } from '@angular/core';
+import { MatDialogRef } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-input-techs-modal',
@@ -24,6 +25,7 @@ export class InputTechsModalComponent implements OnInit {
   level = 0
   constructor(
     private angularFireStorege: AngularFireStorage,
+    private dialogRef: MatDialogRef<InputTechsModalComponent>,
     private techsService: TechsService,
   ) { }
 
@@ -61,9 +63,13 @@ export class InputTechsModalComponent implements OnInit {
           })
         })
       )
-      .subscribe(res => console.log(res), err => console.log(err))
+      .subscribe(() => {
+        this.close()
+      }, err => console.log(err))
   }
-
+  close() {
+    this.dialogRef.close()
+  }
   resetForm() {
     this.technologie = ''
     this.imageUrl = null

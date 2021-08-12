@@ -35,6 +35,7 @@ import { Page404Component } from './pages/page404/page404.component';
 import { InputTechsModalComponent } from './components/input-techs-modal/input-techs-modal.component';
 import { TechsListComponent } from './components/techs-list/techs-list.component';
 import { TechArticlesComponent } from './components/tech-articles/tech-articles.component';
+import { ContactFormComponent } from './components/contact-form/contact-form.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import { TechArticlesComponent } from './components/tech-articles/tech-articles.
     InputTechsModalComponent,
     TechsListComponent,
     TechArticlesComponent,
+    ContactFormComponent,
   ],
   imports: [
     AppRoutingModule,
