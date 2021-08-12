@@ -17,7 +17,7 @@ export class CarouselComponent implements OnInit {
   slides = [
     {
       url: "./../../assets/img/aplication-mobile-smartphone.jpg",
-      text: "application mobiles"
+      text: "applications mobiles"
     },
     {
       url: "./../../assets/img/application_internet.jpg",

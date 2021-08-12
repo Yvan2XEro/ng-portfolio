@@ -21,6 +21,12 @@ export class TechsService {
 
   add(data: {name: string, imgUrl: string, state: number, categorie: string}) {
     return this.store.collection(this.path).add(data)
+    .then(res=>{
+      console.log(res)
+    })
+    .catch(err=>{
+      console.log(err)
+    })
   }
 
   getAllFrontendFrameworks() {

@@ -17,6 +17,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatCardModule } from '@angular/material/card';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { LayoutModule } from '@angular/cdk/layout';
 import { ProfilComponent } from './components/profil/profil.component';
 import { MatCarouselModule } from '@ngbmodule/material-carousel';
@@ -29,6 +30,7 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AdminComponent } from './pages/admin/admin.component'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { Page404Component } from './pages/page404/page404.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +40,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ProfilComponent,
     CarouselComponent,
     AdminComponent,
+    Page404Component,
   ],
   imports: [
     AppRoutingModule,
@@ -64,6 +67,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MatListModule,
     MatCarouselModule,
     ReactiveFormsModule,
+    MatProgressBarModule,
     MatToolbarModule,
   ],
   providers: [],

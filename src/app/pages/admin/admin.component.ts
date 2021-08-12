@@ -55,9 +55,6 @@ export class AdminComponent implements OnInit {
         finalize(() => { fileRef.getDownloadURL().subscribe(
           url => {
             this.imageUrl = url
-            console.log("URL:", url)
-            alert(this.categorie)
-            return
             this.techsService.add({ name: this.technologie, imgUrl: url, state: this.level, categorie: this.categorie })
             .then(res=>console.log(res))
             this.resetForm()
@@ -75,7 +72,6 @@ export class AdminComponent implements OnInit {
   }
 
   changeSelectedCathegorie(cat: any) {
-    alert(cat.value)
     this.categorie = cat.value
   }
 

@@ -24,6 +24,9 @@ $app-default-theme: mat-light-theme(
 .color-white{
   color: rgb(255, 255, 255);
 }
+.mr-2{
+  margin-right: 2px;
+}
 .my-2{
     margin-top: 5px;
     margin-bottom: 5px;
@@ -42,11 +45,20 @@ $app-default-theme: mat-light-theme(
   text-align: center
 }
 .text-12{
-  font-size: 16px;
+  font-size: 12px;
+}
+.text-secondary{
+  color: #8c8c8e;
 }
 .x-scroll{
   width: 100%;
   overflow-x: auto;
+}
+.d-flex{
+  display: flex;
+}
+.f-just-bet{
+  justify-content: space-between;
 }
 .primary-theme{
     background: linear-gradient(159deg, #2d2d3a 0%, #2b2b35 100%);

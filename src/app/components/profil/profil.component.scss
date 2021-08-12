@@ -4,37 +4,62 @@
     height: 80px;
     border-radius: 50%;
 }
+.avatar-icon, .techs-name, .fixed-rigth, .fixed-top{
+  position: absolute;
+}
+$bg-color: linear-gradient(159deg, rgba(37, 37, 50, 0.98) 0%, rgba(35, 35, 45, 0.98) 100%);
+$profile-height: 300pxpx;
+.fixed-top{
+  top: 0;
+  left: 0px;
+  width: 100%;
+  height: $profile-height;
+  opacity: 1;
+  z-index: 2;
+  background: $bg-color;
+  scrollbar-width: none;
+}
 .avatar-icon{
     width: 30px;
     height: 30px;
+    left: 0;
+    top: 0;
+    display: block;
+}
+.fixed-rigth{
+  right: 20px;
+  top: 5px;
+}
+mat-progress-bar{
+  left: 25px;
+  width: 130px;
+}
+.techs-name{
+  left: 40px;
+  top: 5px;
 }
 .img-circle{
     border-radius: 50%;
 }
 
-
-table{
-    width: 100%;
-    tr td{
-        text-align: left;
-        font-size: 11px;
-    }
-}
 mat-list-item {
     color: white;
 }
 
 .scroll-content{
-    border: 0.5px solid #5f5f79;
-    overflow: hidden;
     overflow-y: auto;
-    height: 40%;
+    position: fixed;
+    top: 310px;
+    bottom: 50px;
+    left: 0;
     border-radius: 5px;
-    margin-bottom: 30px;
-    background-color: #1f1f27;
+    max-width: 243px;
+    width: 100%;
     padding: 3px;
+    scrollbar-width: none;
 }
-*::-webkit-scrollbar { display: none;}
+
+.scroll-content::-webkit-scrollbar{ display: none;}
 p{
     font-size: 13px;
 }
@@ -45,6 +70,16 @@ mat-divider{
     margin-right: auto;
 }
 .socials-list{
+    height: 50px;
+    left: 0px;
+    width: 100%;
     padding: 2px;
-    background-color: #191920a2;
+    margin: 0;
+    position: absolute;
+    bottom: 0;
+    background: $bg-color;
+}
+a:hover{
+  transition: .5s;
+  color: white;
 }
