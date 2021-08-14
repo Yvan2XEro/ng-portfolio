@@ -1,4 +1,4 @@
-<mat-toolbar *ngIf="showToolbar" class="primary-theme">
+<mat-toolbar *ngIf="!showSidebar" class="primary-theme">
   <button mat-button (click)="showSidebar = !showSidebar">
     <mat-icon>
       {{ showSidebar ? 'menu_open' : 'menu' }}
@@ -6,10 +6,12 @@
   </button>
 </mat-toolbar>
 <mat-sidenav-container>
-  <mat-sidenav class="sidenev" mode="side" [(opened)]="showSidebar">
+  <mat-sidenav  mode="side" [(opened)]="showSidebar">
     <app-profil></app-profil>
   </mat-sidenav>
   <mat-sidenav-content>
     <router-outlet></router-outlet>
   </mat-sidenav-content>
+  <mat-sidenav position="end" mode="push" class="side-nav-menu" mode="side" [(opened)]="showSidebar">
+  </mat-sidenav>
 </mat-sidenav-container>

@@ -6,7 +6,7 @@
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: "Poppins", sans-serif;letter-spacing: 0.7px; }
 
 $app-primary: mat-palette($mat-teal);
 $app-accent: mat-palette($mat-pink, A200, A100, A400);
@@ -69,6 +69,9 @@ $app-default-theme: mat-light-theme(
     opacity: 0.9;
     color: white;
 }
+.text-16{
+  font-size: 16px;
+}
 .form-control{
   display: block;
   width: 100%;
@@ -76,4 +79,5 @@ $app-default-theme: mat-light-theme(
 .app-input{
   height: 45px;
 }
+
 // @include angular-material-theme($app-default-theme);
