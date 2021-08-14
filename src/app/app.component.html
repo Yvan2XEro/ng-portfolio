@@ -1,7 +1,13 @@
 <mat-toolbar *ngIf="!showSidebar" class="primary-theme">
   <button mat-button (click)="showSidebar = !showSidebar">
     <mat-icon>
-      {{ showSidebar ? 'menu_open' : 'menu' }}
+      {{ showSidebar ? 'sentiment_satisfied' : 'sentiment_satisfied' }}
+    </mat-icon>
+  </button>
+  <!-- <span class="spacer"></span> -->
+  <button class="ml-auto" mat-button (click)="showNavbar = !showNavbar">
+    <mat-icon>
+      {{ showNavbar ? 'double_arrow' : 'menu' }}
     </mat-icon>
   </button>
 </mat-toolbar>
@@ -12,6 +18,7 @@
   <mat-sidenav-content>
     <router-outlet></router-outlet>
   </mat-sidenav-content>
-  <mat-sidenav position="end" mode="push" class="side-nav-menu" mode="side" [(opened)]="showSidebar">
+  <mat-sidenav position="end" mode="push" class="side-nav-menu" mode="side" [(opened)]="showNavbar">
+    <app-nav-list></app-nav-list>
   </mat-sidenav>
 </mat-sidenav-container>

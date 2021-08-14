@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './pages/home/home.component';
 import { BlogComponent } from './pages/blog/blog.component';
+import { MatBadgeModule } from '@angular/material/badge';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
@@ -36,6 +37,7 @@ import { InputTechsModalComponent } from './components/input-techs-modal/input-t
 import { TechsListComponent } from './components/techs-list/techs-list.component';
 import { TechArticlesComponent } from './components/tech-articles/tech-articles.component';
 import { ContactFormComponent } from './components/contact-form/contact-form.component';
+import { NavListComponent } from './components/nav-list/nav-list.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +52,7 @@ import { ContactFormComponent } from './components/contact-form/contact-form.com
     TechsListComponent,
     TechArticlesComponent,
     ContactFormComponent,
+    NavListComponent,
   ],
   imports: [
     AppRoutingModule,
@@ -63,6 +66,7 @@ import { ContactFormComponent } from './components/contact-form/contact-form.com
     FormsModule,
     HTMLEscapeUnescapeModule,
     LayoutModule,
+    MatBadgeModule,
     MatCardModule,
     MatDialogModule,
     MatSelectModule,

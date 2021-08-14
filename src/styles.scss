@@ -31,7 +31,12 @@ $app-default-theme: mat-light-theme(
     margin-top: 5px;
     margin-bottom: 5px;
 }
-
+.text-left{
+  text-align: left;
+}
+.d-block{
+  display: block;
+}
 .p-0{
   padding: 0;
 }

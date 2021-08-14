@@ -15,6 +15,7 @@ export class AppComponent {
   sidenav!: MatSidenav;
   showToolbar = false;
   showSidebar = true
+  showNavbar = true;
   constructor(
     private observer: BreakpointObserver,
     public carousel: CarouselService
