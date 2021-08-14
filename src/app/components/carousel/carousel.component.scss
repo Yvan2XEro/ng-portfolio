@@ -1,78 +1,50 @@
 .mobile-screen {
   width: 100%;
   box-sizing: border-box;
-  border: 0.3px solid #2b2b35e3;
+  background-image: url('/assets/img/AdobeStock.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-.mobile-screen h1 {
-  text-align: center;
-  padding: 10px;
-  font-size: 25px;
-  text-shadow: 1px 1px 3px;
-  z-index: 2;
+.screen-opacity{
+  width: 100%;
+  height: 100%;
+  background-color: #2b2b35b0;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 16px;
+  min-height: 300px;
 }
-.color-red {
-  color: #ff1d1d;
+.syntax-code{
+  color: #FFC107;
 }
-.text-mobile-screen {
-  font-size: 20px;
+.ml-15{
+  margin-left: 15px;
 }
-.text-4 {
-  font-size: 1.5rem;
-}
-.text-15-px {
-  font-size: 15px;
-}
-.pt-45 {
-  padding-top: 100px;
-}
-.color-org {
-  color: #ff7b00e3;
-}
-.text-syntax {
-  color: #ff1bd9;
-}
-.text-center-y {
-  padding: 100px 0;
+mat-carousel{
+  height: 50%;
 }
 .text-shadow {
   text-shadow: 3px 3px 10px black;
   width: 100%;
   height: 100%;
-  background: #2b2b35b0;
+  background: #1c1c3fa2;
+  padding: 30px;
   padding-left: 100px;
-  padding-right: 100px;
 }
 
-.typing {
-  width: 0ch;
-  height: 100%;
-  color: white;
-  float: left;
-  overflow: hidden;
-  white-space: nowrap;
-  animation: typing 3.5s steps(22) 0.5s infinite alternate;
-}
-
-.animation-none {
-  animation: none;
-  overflow: none;
-  color: #85f1ffe3;
+h1{
+  font-size: 25px;
+  width: 50%;
+  color: #fafafc;
+  font-weight: 800;
 }
 .crow {
-  float: left;
+  // float: left;
   color: white;
   font-family: consolas;
   font-weight: bold;
   font-size: 30px;
   animation: crow 0.2s linear 0s infinite;
-}
-@keyframes typing {
-  from {
-    width: 12ch;
-  }
-  to {
-    width: 44ch;
-  }
 }
 @keyframes crow {
   from {
@@ -82,3 +54,4 @@
     opacity: 1;
   }
 }
+

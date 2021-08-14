@@ -21,7 +21,7 @@ export class AppComponent {
   ) { }
 
   ngAfterViewInit() {
-    this.observer.observe(['(max-width: 644px)']).subscribe((res) => {
+    this.observer.observe(['(max-width: 758px)']).subscribe((res) => {
       if (res.matches) {
         this.carousel.showCarousel$.next(false)
         this.sidenav.mode = 'over';
