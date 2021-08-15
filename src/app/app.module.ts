@@ -15,6 +15,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatCardModule } from '@angular/material/card';
@@ -67,6 +68,7 @@ import { NavListComponent } from './components/nav-list/nav-list.component';
     HTMLEscapeUnescapeModule,
     LayoutModule,
     MatBadgeModule,
+    MatSnackBarModule,
     MatCardModule,
     MatDialogModule,
     MatSelectModule,
