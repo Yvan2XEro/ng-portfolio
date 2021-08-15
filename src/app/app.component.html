@@ -1,3 +1,6 @@
+<div *ngIf="loaderService.isLoading | async" class="loader-container">
+  <mat-spinner style="top: 40%; left: 50%;"></mat-spinner>
+</div>
 <mat-toolbar *ngIf="!showSidebar" class="primary-theme">
   <button mat-button (click)="showSidebar = !showSidebar">
     <mat-icon>

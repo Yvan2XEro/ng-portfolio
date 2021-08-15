@@ -1,3 +1,4 @@
+import { LoaderService } from './../../shared/services/loader.service';
 import { PostService } from './../../shared/services/post.service';
 import { Component, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
@@ -15,15 +16,23 @@ export class ContactFormComponent implements OnInit {
   }
   constructor(
     private postService: PostService,
-    private matSnackBar: MatSnackBar
+    private matSnackBar: MatSnackBar,
+    private loaderService: LoaderService
   ) { }
 
   ngOnInit(): void {
   }
   send(){
+    this.loaderService.isLoading.next(true)
     this.postService.postMessage(this.message)
     .then(()=>{
-      this.matSnackBar.open('Cannonball!!', 'Splash', { duration: 5000  })
+      this.loaderService.isLoading.next(false)
+      this.matSnackBar.open('Message sent!', 'Close', { duration: 5000  })
+      this.message = {
+        email: '',
+        name: '',
+        message: ''
+      }
     });
   }
 }

@@ -1,3 +1,4 @@
+import { LoaderService } from './shared/services/loader.service';
 import { CarouselService } from './shared/services/carousel.service';
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { Component, ViewChild } from '@angular/core';
@@ -18,7 +19,8 @@ export class AppComponent {
   showNavbar = true;
   constructor(
     private observer: BreakpointObserver,
-    public carousel: CarouselService
+    public carousel: CarouselService,
+    public loaderService: LoaderService
   ) { }
 
   ngAfterViewInit() {

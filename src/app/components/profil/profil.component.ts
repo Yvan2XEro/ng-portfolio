@@ -1,3 +1,4 @@
+import { LoaderService } from './../../shared/services/loader.service';
 import { TechsService } from './../../shared/services/techs.service';
 import { Component, OnInit } from '@angular/core';
 import { map } from 'rxjs/operators';
@@ -34,10 +35,12 @@ export class ProfilComponent implements OnInit {
     },
   ]
   constructor(
-    private techsService: TechsService
+    private techsService: TechsService,
+    private loaderService: LoaderService,
   ) { }
 
   ngOnInit(): void {
+    this.loaderService.isLoading.next(true)
     this.techsService.getAllTechs().snapshotChanges()
     .pipe(
       map(changes =>
@@ -48,10 +51,8 @@ export class ProfilComponent implements OnInit {
     )
       .subscribe(data => {
         this.techs = data
+        this.loaderService.isLoading.next(false)
       })
-
-    this.techsService.getAllBackendFrameworks()
-    this.techsService.getAllMobileFrameworks()
   }
   filterTechs(cathegorie: string) {
     switch (cathegorie) {

@@ -1,3 +1,4 @@
+import { RequestInterceptor } from './shared/interceptors/request.interceptor';
 import { environment } from './../environments/environment';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -19,6 +20,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatCardModule } from '@angular/material/card';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatDialogModule } from '@angular/material/dialog'
 import { LayoutModule } from '@angular/cdk/layout';
@@ -39,6 +41,10 @@ import { TechsListComponent } from './components/techs-list/techs-list.component
 import { TechArticlesComponent } from './components/tech-articles/tech-articles.component';
 import { ContactFormComponent } from './components/contact-form/contact-form.component';
 import { NavListComponent } from './components/nav-list/nav-list.component';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { ServicesListComponent } from './components/services-list/services-list.component';
+import { ProjectsListComponent } from './components/projects-list/projects-list.component';
+import { RecommandationsListComponent } from './components/recommandations-list/recommandations-list.component';
 
 @NgModule({
   declarations: [
@@ -54,6 +60,9 @@ import { NavListComponent } from './components/nav-list/nav-list.component';
     TechArticlesComponent,
     ContactFormComponent,
     NavListComponent,
+    ServicesListComponent,
+    ProjectsListComponent,
+    RecommandationsListComponent,
   ],
   imports: [
     AppRoutingModule,
@@ -78,6 +87,7 @@ import { NavListComponent } from './components/nav-list/nav-list.component';
     MatFormFieldModule,
     MatDividerModule,
     MatDividerModule,
+    MatProgressSpinnerModule,
     MatExpansionModule,
     MatInputModule,
     MatListModule,
@@ -86,8 +96,11 @@ import { NavListComponent } from './components/nav-list/nav-list.component';
     MatProgressBarModule,
     MatToolbarModule,
   ],
+  entryComponents: [
+    InputTechsModalComponent,
+  ],
   providers: [
-    InputTechsModalComponent
+    { provide: HTTP_INTERCEPTORS, useClass: RequestInterceptor, multi: true },
   ],
   bootstrap: [AppComponent]
 })

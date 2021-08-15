@@ -1,21 +1,27 @@
 <a class="nav-link text-left text-white d-block"
+  [class]="activeHome.value?'active':''"
   routerLinkActive="active"
   [routerLinkActiveOptions]="{exact: true}"
-  routerLink="/"
+  href="/"
+  (click)="checkHomeActive()"
 ><mat-icon>home</mat-icon></a>
 <a class="nav-link text-left text-white d-block"
   routerLinkActive="active"
   [routerLinkActiveOptions]="{exact: true}"
   routerLink="/blog"
+  (click)="checkHomeActive()"
 >Blog</a>
 <a class="nav-link text-left text-white d-block"
   routerLinkActive="active"
   [routerLinkActiveOptions]="{exact: true}"
-  routerLink="/contact-me">Contact me</a>
+  routerLink="/contact-me"
+  (click)="checkHomeActive()"
+>Contact me</a>
 <a class="nav-link text-left text-white d-block"
   routerLinkActive="active"
   [routerLinkActiveOptions]="{exact: true}"
   routerLink="/about"
+  (click)="checkHomeActive()"
 >About</a>
 
 <div class="fixed-bottom ">
