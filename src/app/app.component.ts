@@ -10,13 +10,13 @@ import { MatSidenav } from '@angular/material/sidenav';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'portfolio';
+  title = 'portfolio'
 
   @ViewChild(MatSidenav)
-  sidenav!: MatSidenav;
-  showToolbar = false;
+  sidenav!: MatSidenav
+  showToolbar = false
   showSidebar = true
-  showNavbar = true;
+  showNavbar = true
   constructor(
     private observer: BreakpointObserver,
     public carousel: CarouselService,
@@ -27,14 +27,16 @@ export class AppComponent {
     this.observer.observe(['(max-width: 758px)']).subscribe((res) => {
       if (res.matches) {
         this.carousel.showCarousel$.next(false)
-        this.sidenav.mode = 'over';
-        this.sidenav.close();
+        this.sidenav.mode = 'over'
+        this.sidenav.close()
         this.showToolbar = true
+        this.showNavbar = false
       } else {
         this.carousel.showCarousel$.next(true)
-        this.sidenav.mode = 'side';
-        this.sidenav.open();
+        this.sidenav.mode = 'side'
+        this.sidenav.open()
         this.showToolbar = false
+        this.showNavbar = true
       }
     });
   }

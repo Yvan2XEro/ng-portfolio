@@ -63,3 +63,10 @@ mat-icon{
   top: 10px;
   font-weight: 900;
 }
+@media only screen and (max-width: 543px) {
+  .contact-block{
+    padding: 15px;
+    box-sizing: border-box;
+  }
+
+}

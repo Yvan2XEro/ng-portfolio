@@ -1,0 +1,8 @@
+<div class="lightbox-container">
+  <div (click)="close()" class="close-btn">
+    <mat-icon color="warn">close</mat-icon>
+  </div>
+  <mat-icon class="btn-lightbox btn-next" (click)="next()" color="warn">arrow_forward_ios</mat-icon>
+  <mat-icon class="btn-lightbox btn-prev" (click)="prev()" color="warn">arrow_back_ios</mat-icon>
+  <app-lightbox-image [imageUrl]="indexedImage"></app-lightbox-image>
+</div>

@@ -45,6 +45,8 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ServicesListComponent } from './components/services-list/services-list.component';
 import { ProjectsListComponent } from './components/projects-list/projects-list.component';
 import { RecommandationsListComponent } from './components/recommandations-list/recommandations-list.component';
+import { LightboxComponent } from './components/lightbox/lightbox.component';
+import { LightboxImageComponent } from './components/lightbox/lightbox-image/lightbox-image.component';
 
 @NgModule({
   declarations: [
@@ -63,6 +65,8 @@ import { RecommandationsListComponent } from './components/recommandations-list/
     ServicesListComponent,
     ProjectsListComponent,
     RecommandationsListComponent,
+    LightboxComponent,
+    LightboxImageComponent,
   ],
   imports: [
     AppRoutingModule,
@@ -98,6 +102,7 @@ import { RecommandationsListComponent } from './components/recommandations-list/
   ],
   entryComponents: [
     InputTechsModalComponent,
+    LightboxComponent,
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: RequestInterceptor, multi: true },
