@@ -1,1 +1,9 @@
-<app-tech-articles></app-tech-articles>
+<ng-container>
+  <mat-radio-group [(ngModel)]="flag">
+    <mat-radio-button value="techs">Techs</mat-radio-button>
+    <mat-radio-button value="projects">Projects</mat-radio-button>
+  </mat-radio-group>
+</ng-container>
+
+<app-admin-techs *ngIf="flag=='techs'"></app-admin-techs>
+<app-admin-projects *ngIf="flag=='projects'"></app-admin-projects>

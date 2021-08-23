@@ -2,6 +2,7 @@ import { Tech } from './../interfaces/Technologie';
 import { AngularFireDatabase, } from '@angular/fire/database';
 import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
+import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -32,6 +33,14 @@ export class TechsService {
   getAllTechs() {
 
     return this.store.collection<{name: string, imgUrl: string, state: number, categorie: string}[]>(this.path)
+    .snapshotChanges()
+    .pipe(
+      map(changes =>
+        changes.map(c =>
+          ({ id: c.payload.doc.id, ...c.payload.doc.data() })
+        )
+      )
+    )
   }
 
   getAllBackendFrameworks() {

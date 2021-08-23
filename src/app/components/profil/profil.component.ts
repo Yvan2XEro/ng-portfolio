@@ -12,26 +12,31 @@ export class ProfilComponent implements OnInit {
 
   age = (new Date()).getFullYear() - 1999
   techs:any[] = []
-  socials: { classIcon: string, url: string }[] = [
+  socials: { classIcon: string, url: string, title: string }[] = [
     {
       classIcon: "fab fa-github",
-      url: "https://github.com/Yvan2Ero"
+      url: "https://github.com/Yvan2Ero",
+      title: "Github"
     },
     {
       classIcon: "fab fa-discord",
-      url: "https://github.com/Yvan2Ero"
+      url: "https://github.com/Yvan2Ero",
+      title: "Discord"
     },
     {
       classIcon: "fab fa-facebook",
-      url: "https://github.com/Yvan2Ero"
+      url: "https://github.com/Yvan2Ero",
+      title: "Facebook"
     },
     {
       classIcon: "fab fa-twitter",
-      url: "https://github.com/Yvan2Ero"
+      url: "https://github.com/Yvan2Ero",
+      title: "Twitter"
     },
     {
       classIcon: "fab fa-linkedin-in",
-      url: "https://github.com/Yvan2Ero"
+      url: "https://github.com/Yvan2Ero",
+      title: "Linkedin"
     },
   ]
   constructor(
@@ -41,14 +46,7 @@ export class ProfilComponent implements OnInit {
 
   ngOnInit(): void {
     this.loaderService.isLoading.next(true)
-    this.techsService.getAllTechs().snapshotChanges()
-    .pipe(
-      map(changes =>
-        changes.map(c =>
-          ({ id: c.payload.doc.id, ...c.payload.doc.data() })
-        )
-      )
-    )
+    this.techsService.getAllTechs()
       .subscribe(data => {
         this.techs = data
         this.loaderService.isLoading.next(false)

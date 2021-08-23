@@ -4,5 +4,6 @@
   </div>
   <mat-icon class="btn-lightbox btn-next" (click)="next()" color="warn">arrow_forward_ios</mat-icon>
   <mat-icon class="btn-lightbox btn-prev" (click)="prev()" color="warn">arrow_back_ios</mat-icon>
-  <app-lightbox-image [imageUrl]="indexedImage"></app-lightbox-image>
+  <app-lightbox-image [@animImageSlider]="indexedImage" [imageUrl]="indexedImage"></app-lightbox-image>
+  <p class="label-image-number" style="color: red;">{{ i+1 }}/ {{ images.length }}</p>
 </div>

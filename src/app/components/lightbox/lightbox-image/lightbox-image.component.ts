@@ -1,28 +1,12 @@
 import { Component, Input, OnChanges, OnDestroy, OnInit, HostBinding  } from '@angular/core';
-import { trigger, state, style, animate, transition, } from '@angular/animations';
+
+
 
 
 @Component({
   selector: 'app-lightbox-image',
   templateUrl: './lightbox-image.component.html',
   styleUrls: ['./lightbox-image.component.scss'],
-  animations: [
-    trigger('lightboxFade', [
-      transition(':lightboxFadeEnterActive', [
-        style({transform: 'translateY(-100%)'}),
-        animate('200ms ease-in', style({opacity: '0.3s'}))
-      ]),
-      transition(':lightboxFadeLeaveActive', [
-        animate('200ms ease-in', style({opacity: '0.3s'}))
-      ]),
-      transition(':lightboxFadeLeaveActive', [
-        animate('200ms ease-in', style({opacity: '0.3s'}))
-      ]),
-      transition(':lightboxFadeLeaveActive', [
-        animate('200ms ease-in', style({opacity: '0.3s'}))
-      ])
-    ])
-  ]
 })
 export class LightboxImageComponent implements OnInit, OnDestroy, OnChanges {
 
@@ -80,6 +64,5 @@ export class LightboxImageComponent implements OnInit, OnDestroy, OnChanges {
       top: ((window.innerHeight - imgHeight) * 0.5) + 'px',
       left: ((window.innerWidth - imgWidth) * 0.5) + 'px'
     }
-    console.log(this.style)
   }
 }

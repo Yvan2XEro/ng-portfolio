@@ -7,10 +7,16 @@
   bottom: 0;
   width: 100%;
   height: 100%;
-  background: transparent;
+  background: rgba(22, 26, 41, 0.733);
 }
 *{
   box-sizing: border-box;
+}
+.label-image-number{
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  text-align: center;
 }
 .close-btn{
   position: absolute;

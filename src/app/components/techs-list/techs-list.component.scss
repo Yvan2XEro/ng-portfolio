@@ -2,10 +2,10 @@
   position: absolute;
 }
 .avatar-icon{
-  width: 30px;
-  height: 30px;
-  left: 0;
-  top: 0;
+  width: 20px;
+  height: 20px;
+  left: 10px;
+  top: 5px;
   display: block;
 }
 .techs-name{
@@ -15,10 +15,13 @@
 
 .fixed-rigth{
   right: 20px;
-  top: 5px;
+  top: 13px;
 }
 
 mat-progress-bar{
   left: 25px;
   width: 130px;
+}
+.text-16{
+  font-size: 13px;
 }

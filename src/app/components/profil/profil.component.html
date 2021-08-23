@@ -34,6 +34,6 @@
     </div>
 
     <p div fxLayout="row" fxLayoutAlign="space-around center" class="socials-list">
-        <a class="text-secondary hover-primary" *ngFor="let s of socials" [href]="s.url"><i [class]="s.classIcon"></i></a>
+        <a [title]="s.title" class="text-secondary hover-primary" *ngFor="let s of socials" [href]="s.url"><i [class]="s.classIcon"></i></a>
     </p>
 </ng-container>

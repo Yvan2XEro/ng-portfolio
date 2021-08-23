@@ -1,81 +1,16 @@
 <h1>Mes realisations</h1>
-<div  fxLayout="row wrap" fxLayoutGap="32px" fxLayoutAlign="flex-start">
-  <ng-container >
+<div  fxLayout="row wrap" fxLayout.lt-sm="column"  fxLayoutGap="32px" fxLayoutAlign="flex-start">
+  <ng-container *ngFor="let p of projects" >
     <mat-card fxFlex="0 1 calc(33.3% - 32px)" class="primary-theme my-2">
-        <img (click)="openLightbox($event)" width="50px" class="article-icon" height="50px" src="https://www.sportsbusinessjournal.com/-/media/Images/SBD-Photos/2015/06/18/IMG-Academy.ashx?w=928" alt="img techs" srcset="">
+        <img (click)="openLightbox(p.images)" width="50px" class="article-icon pointer" height="50px" [src]="p.images[0]" alt="img techs" srcset="">
         <mat-card-header>
-            <mat-card-title>Systeme d'aide a la production des emplois de temps </mat-card-title>
+            <mat-card-title>{{p.title}}</mat-card-title>
         </mat-card-header>
         <mat-card-content>
-          <p class="text-secondary">Lorem ipsum, dolor sit amet consectetur adipisicing elit amet consectetur adipisicing elit</p>
+          <p class="text-secondary post-content" [innerHTML]="p.description" ></p>
         </mat-card-content>
         <mat-card-footer>
         </mat-card-footer>
     </mat-card>
-</ng-container>
-<ng-container >
-  <mat-card fxFlex="0 1 calc(33.3% - 32px)" class="primary-theme my-2">
-      <img (click)="openLightbox($event)"  width="50px" class="article-icon" height="50px" src="https://www.sportsbusinessjournal.com/-/media/Images/SBD-Photos/2015/06/18/IMG-Academy.ashx?w=928" alt="img techs" srcset="">
-      <mat-card-header>
-          <mat-card-title>Systeme d'aide a la production des emplois de temps </mat-card-title>
-      </mat-card-header>
-      <mat-card-content>
-        <p class="text-secondary">Lorem ipsum, dolor sit amet consectetur adipisicing elit amet consectetur adipisicing elit</p>
-      </mat-card-content>
-      <mat-card-footer>
-      </mat-card-footer>
-  </mat-card>
-</ng-container>
-<ng-container >
-  <mat-card fxFlex="0 1 calc(33.3% - 32px)" class="primary-theme my-2">
-      <img (click)="openLightbox($event)" width="50px" class="article-icon" height="50px" src="https://www.sportsbusinessjournal.com/-/media/Images/SBD-Photos/2015/06/18/IMG-Academy.ashx?w=928" alt="img techs" srcset="">
-      <mat-card-header>
-          <mat-card-title>Systeme d'aide a la production des emplois de temps </mat-card-title>
-      </mat-card-header>
-      <mat-card-content>
-        <p class="text-secondary">Lorem ipsum, dolor sit amet consectetur adipisicing elit amet consectetur adipisicing elit</p>
-      </mat-card-content>
-      <mat-card-footer>
-      </mat-card-footer>
-  </mat-card>
-</ng-container>
-<ng-container >
-  <mat-card fxFlex="0 1 calc(33.3% - 32px)" class="primary-theme my-2">
-      <img (click)="openLightbox($event)" width="50px" class="article-icon" height="50px" src="https://www.sportsbusinessjournal.com/-/media/Images/SBD-Photos/2015/06/18/IMG-Academy.ashx?w=928" alt="img techs" srcset="">
-      <mat-card-header>
-          <mat-card-title>Systeme d'aide a la production des emplois de temps </mat-card-title>
-      </mat-card-header>
-      <mat-card-content>
-        <p class="text-secondary">Lorem ipsum, dolor sit amet consectetur adipisicing elit amet consectetur adipisicing elit</p>
-      </mat-card-content>
-      <mat-card-footer>
-      </mat-card-footer>
-  </mat-card>
-</ng-container>
-<ng-container >
-  <mat-card fxFlex="0 1 calc(33.3% - 32px)" class="primary-theme my-2">
-      <img (click)="openLightbox($event)" width="50px" class="article-icon" height="50px" src="https://www.sportsbusinessjournal.com/-/media/Images/SBD-Photos/2015/06/18/IMG-Academy.ashx?w=928" alt="img techs" srcset="">
-      <mat-card-header>
-          <mat-card-title>Systeme d'aide a la production des emplois de temps </mat-card-title>
-      </mat-card-header>
-      <mat-card-content>
-        <p class="text-secondary">Lorem ipsum, dolor sit amet consectetur adipisicing elit amet consectetur adipisicing elit</p>
-      </mat-card-content>
-      <mat-card-footer>
-      </mat-card-footer>
-  </mat-card>
-</ng-container>
-<ng-container >
-  <mat-card fxFlex="0 1 calc(33.3% - 32px)" class="primary-theme my-2">
-      <img (click)="openLightbox($event)" width="50px" class="article-icon" height="50px" src="https://www.sportsbusinessjournal.com/-/media/Images/SBD-Photos/2015/06/18/IMG-Academy.ashx?w=928" alt="img techs" srcset="">
-      <mat-card-header>
-          <mat-card-title>Systeme d'aide a la production des emplois de temps </mat-card-title>
-      </mat-card-header>
-      <mat-card-content>
-        <p class="text-secondary">Lorem ipsum, dolor sit amet consectetur adipisicing elit amet consectetur adipisicing elit</p>
-      </mat-card-content>
-      <mat-card-footer>
-      </mat-card-footer>
-  </mat-card>
 </ng-container>
 </div>

@@ -1,3 +1,5 @@
+
+import { CarouselModule } from 'ngx-owl-carousel-o';
 import { RequestInterceptor } from './shared/interceptors/request.interceptor';
 import { environment } from './../environments/environment';
 import { NgModule } from '@angular/core';
@@ -20,6 +22,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatCardModule } from '@angular/material/card';
+import { MatRadioModule } from '@angular/material/radio';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatDialogModule } from '@angular/material/dialog'
@@ -47,6 +50,9 @@ import { ProjectsListComponent } from './components/projects-list/projects-list.
 import { RecommandationsListComponent } from './components/recommandations-list/recommandations-list.component';
 import { LightboxComponent } from './components/lightbox/lightbox.component';
 import { LightboxImageComponent } from './components/lightbox/lightbox-image/lightbox-image.component';
+import { UnescapePipe } from './shared/pipes/unescape.pipe';
+import { AdminTechsComponent } from './components/admin-techs/admin-techs.component';
+import { AdminProjectsComponent } from './components/admin-projects/admin-projects.component';
 
 @NgModule({
   declarations: [
@@ -67,6 +73,9 @@ import { LightboxImageComponent } from './components/lightbox/lightbox-image/lig
     RecommandationsListComponent,
     LightboxComponent,
     LightboxImageComponent,
+    UnescapePipe,
+    AdminTechsComponent,
+    AdminProjectsComponent,
   ],
   imports: [
     AppRoutingModule,
@@ -76,6 +85,7 @@ import { LightboxImageComponent } from './components/lightbox/lightbox-image/lig
     AngularFireStorageModule,
     BrowserModule,
     BrowserAnimationsModule,
+    CarouselModule,
     FlexLayoutModule,
     FormsModule,
     HTMLEscapeUnescapeModule,
@@ -98,6 +108,7 @@ import { LightboxImageComponent } from './components/lightbox/lightbox-image/lig
     MatCarouselModule,
     ReactiveFormsModule,
     MatProgressBarModule,
+    MatRadioModule,
     MatToolbarModule,
   ],
   entryComponents: [
