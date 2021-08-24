@@ -18,8 +18,12 @@ export class NavListComponent implements OnInit {
   checkHomeActive(){
     if(location.pathname=='/'||location.pathname=='')
       this.activeHome.next(true)
-    else
+    else{
       this.activeHome.next(false)
+      let hl = document.getElementById('homeLink')
+      if(hl != null)
+        hl.classList.remove('active')
+    }
   }
 
 }
