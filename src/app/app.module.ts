@@ -53,6 +53,8 @@ import { LightboxImageComponent } from './components/lightbox/lightbox-image/lig
 import { UnescapePipe } from './shared/pipes/unescape.pipe';
 import { AdminTechsComponent } from './components/admin-techs/admin-techs.component';
 import { AdminProjectsComponent } from './components/admin-projects/admin-projects.component';
+import { InputRatingModaleComponent } from './components/input-rating-modale/input-rating-modale.component';
+import { RaitingComponent } from './components/input-rating-modale/raiting/raiting.component';
 
 @NgModule({
   declarations: [
@@ -76,6 +78,8 @@ import { AdminProjectsComponent } from './components/admin-projects/admin-projec
     UnescapePipe,
     AdminTechsComponent,
     AdminProjectsComponent,
+    InputRatingModaleComponent,
+    RaitingComponent,
   ],
   imports: [
     AppRoutingModule,

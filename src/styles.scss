@@ -58,6 +58,7 @@ $app-default-theme: mat-light-theme(
 .mr-2{
   margin-right: 8px;
 }
+
 .text-center{
   text-align: center
 }
@@ -77,6 +78,13 @@ $app-default-theme: mat-light-theme(
 .f-just-bet{
   justify-content: space-between;
 }
+.select-bg-dark{
+  background: linear-gradient(159deg, #e6e6e9 0%, #cfcff0 100%);
+}
+.mat-select-content{
+  width: 300px !important;
+}
+
 .primary-theme{
     background: linear-gradient(159deg, #2d2d3a 0%, #2b2b35 100%);
     opacity: 0.9;

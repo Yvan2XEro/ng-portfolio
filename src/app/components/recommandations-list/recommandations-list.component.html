@@ -1,183 +1,24 @@
 <h1>Recommandations</h1>
-<owl-carousel-o [options]="customOptions">
-  <ng-template carouselSlide>
-    <div class="slide">
-        <mat-card class="primary-theme my-2 slide-item-article">
-        <mat-card-header>
-            <mat-card-title>Temsuate Jean</mat-card-title>
-        </mat-card-header>
-        <mat-card-content>
-          <p class="text-secondary">Eroken est le meilleur programmeur que j'ai connu</p>
-        </mat-card-content>
-        <mat-card-footer>
+<div>
+  <owl-carousel-o [options]="customOptions">
+    <ng-template carouselSlide *ngFor="let r of recommandations">
+      <div class="slide">
+          <mat-card class="primary-theme my-2 slide-item-article">
+              <mat-card-title>{{ r.name }}</mat-card-title>
+              <p class="proffession-label">...{{ r.proffession }} </p>
+          <mat-card-content>
+            <p class="text-secondary" [innerHTML]="r.message"></p>
+          </mat-card-content>
+          <mat-card-footer>
 
-        </mat-card-footer>
-    </mat-card>
-    </div>
-  </ng-template>
-  <ng-template carouselSlide>
-    <div class="slide">
-        <mat-card class="primary-theme my-2 slide-item-article">
-        <mat-card-header>
-            <mat-card-title>Temsuate Jean</mat-card-title>
-        </mat-card-header>
-        <mat-card-content>
-          <p class="text-secondary">Eroken est le meilleur programmeur que j'ai connu</p>
-        </mat-card-content>
-        <mat-card-footer>
-
-        </mat-card-footer>
-    </mat-card>
-    </div>
-  </ng-template>
-  <ng-template carouselSlide>
-    <div class="slide">
-        <mat-card class="primary-theme my-2 slide-item-article">
-        <mat-card-header>
-            <mat-card-title>Temsuate Jean</mat-card-title>
-        </mat-card-header>
-        <mat-card-content>
-          <p class="text-secondary">Eroken est le meilleur programmeur que j'ai connu</p>
-        </mat-card-content>
-        <mat-card-footer>
-
-        </mat-card-footer>
-    </mat-card>
-    </div>
-  </ng-template>
-  <ng-template carouselSlide>
-    <div class="slide">
-        <mat-card class="primary-theme my-2 slide-item-article">
-        <mat-card-header>
-            <mat-card-title>Temsuate Jean</mat-card-title>
-        </mat-card-header>
-        <mat-card-content>
-          <p class="text-secondary">Eroken est le meilleur programmeur que j'ai connu</p>
-        </mat-card-content>
-        <mat-card-footer>
-
-        </mat-card-footer>
-    </mat-card>
-    </div>
-  </ng-template>
-  <ng-template carouselSlide>
-    <div class="slide">
-        <mat-card class="primary-theme my-2 slide-item-article">
-        <mat-card-header>
-            <mat-card-title>Temsuate Jean</mat-card-title>
-        </mat-card-header>
-        <mat-card-content>
-          <p class="text-secondary">Eroken est le meilleur programmeur que j'ai connu</p>
-        </mat-card-content>
-        <mat-card-footer>
-
-        </mat-card-footer>
-    </mat-card>
-    </div>
-  </ng-template>
-  <ng-template carouselSlide>
-    <div class="slide">
-      <mat-card class="primary-theme my-2 slide-item-article">
-        <mat-card-header>
-            <mat-card-title>Temsuate Jean</mat-card-title>
-        </mat-card-header>
-        <mat-card-content>
-          <p class="text-secondary">Eroken est le meilleur programmeur que j'ai connu</p>
-        </mat-card-content>
-        <mat-card-footer>
-
-        </mat-card-footer>
-    </mat-card>
-    </div>
-  </ng-template>
-  <ng-template carouselSlide>
-    <div class="slide">
-        <mat-card class="primary-theme my-2 slide-item-article">
-        <mat-card-header>
-            <mat-card-title>Temsuate Jean</mat-card-title>
-        </mat-card-header>
-        <mat-card-content>
-          <p class="text-secondary">Eroken est le meilleur programmeur que j'ai connu</p>
-        </mat-card-content>
-        <mat-card-footer>
-
-        </mat-card-footer>
-    </mat-card>
-    </div>
-  </ng-template>
-  <ng-template carouselSlide>
-    <div class="slide">
-        <mat-card class="primary-theme my-2 slide-item-article">
-        <mat-card-header>
-            <mat-card-title>Temsuate Jean</mat-card-title>
-        </mat-card-header>
-        <mat-card-content>
-          <p class="text-secondary">Eroken est le meilleur programmeur que j'ai connu</p>
-        </mat-card-content>
-        <mat-card-footer>
-
-        </mat-card-footer>
-    </mat-card>
-    </div>
-  </ng-template>
-  <ng-template carouselSlide>
-    <div class="slide">
-        <mat-card class="primary-theme my-2 slide-item-article">
-        <mat-card-header>
-            <mat-card-title>Temsuate Jean</mat-card-title>
-        </mat-card-header>
-        <mat-card-content>
-          <p class="text-secondary">Eroken est le meilleur programmeur que j'ai connu</p>
-        </mat-card-content>
-        <mat-card-footer>
-
-        </mat-card-footer>
-    </mat-card>
-    </div>
-  </ng-template>
-  <ng-template carouselSlide>
-    <div class="slide">
-        <mat-card class="primary-theme my-2 slide-item-article">
-        <mat-card-header>
-            <mat-card-title>Temsuate Jean</mat-card-title>
-        </mat-card-header>
-        <mat-card-content>
-          <p class="text-secondary">Eroken est le meilleur programmeur que j'ai connu</p>
-        </mat-card-content>
-        <mat-card-footer>
-
-        </mat-card-footer>
-    </mat-card>
-    </div>
-  </ng-template>
-  <ng-template carouselSlide>
-    <div class="slide">
-        <mat-card class="primary-theme my-2 slide-item-article">
-        <mat-card-header>
-            <mat-card-title>Temsuate Jean</mat-card-title>
-        </mat-card-header>
-        <mat-card-content>
-          <p class="text-secondary">Eroken est le meilleur programmeur que j'ai connu</p>
-        </mat-card-content>
-        <mat-card-footer>
-
-        </mat-card-footer>
-    </mat-card>
-    </div>
-  </ng-template>
-  <ng-template carouselSlide>
-    <div class="slide">
-      <mat-card class="primary-theme my-2 slide-item-article">
-        <mat-card-header>
-            <mat-card-title>Temsuate Jean</mat-card-title>
-        </mat-card-header>
-        <mat-card-content>
-          <p class="text-secondary">Eroken est le meilleur programmeur que j'ai connu</p>
-        </mat-card-content>
-        <mat-card-footer>
-
-        </mat-card-footer>
-    </mat-card>
-    </div>
-  </ng-template>
-</owl-carousel-o>
+          </mat-card-footer>
+      </mat-card>
+      </div>
+    </ng-template>
+  </owl-carousel-o>
+  <div class="text-rigth">
+    <button (click)="openRatingModale()" mat-mini-fab color="warn" title="Ajouter une recommandation" aria-label="Example icon button with a home icon">
+      <mat-icon>add</mat-icon>
+    </button>
+  </div>
+</div>

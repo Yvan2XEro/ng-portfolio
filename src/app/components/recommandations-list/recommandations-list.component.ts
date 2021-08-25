@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
+import { MatDialog } from '@angular/material/dialog';
+import { InputRatingModaleComponent } from '../input-rating-modale/input-rating-modale.component';
+import { PostService } from '../../shared/services/post.service';
 @Component({
   selector: 'app-recommandations-list',
   templateUrl: './recommandations-list.component.html',
@@ -7,7 +10,10 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 })
 export class RecommandationsListComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private matDialog: MatDialog,
+    private postService: PostService
+  ) { }
   customOptions: OwlOptions = {
     loop: false,
     mouseDrag: true,
@@ -32,7 +38,20 @@ export class RecommandationsListComponent implements OnInit {
     },
     nav: true
   }
+
+  recommandations: any[] = []
   ngOnInit(): void {
+    this.postService.getAllRecommandations()
+    .subscribe(recommandations =>{
+      this.recommandations = recommandations
+    })
+  }
+
+  openRatingModale() {
+    this.matDialog.open(InputRatingModaleComponent)
+    .afterClosed().subscribe(()=>{
+      this.ngOnInit()
+    })
   }
 
 }

@@ -24,7 +24,7 @@ mat-list-item {
 .scroll-content{
     overflow-y: auto;
     position: fixed;
-    top: 310px;
+    top: 326px;
     bottom: 50px;
     left: 0;
     border-radius: 5px;
@@ -32,6 +32,9 @@ mat-list-item {
     width: 100%;
     padding: 3px;
     scrollbar-width: none;
+}
+.bold{
+  font-weight: 700;
 }
 
 .scroll-content::-webkit-scrollbar{ display: none;}

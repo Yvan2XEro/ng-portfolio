@@ -9,6 +9,7 @@ export class PostService {
 
   private readonly messagesPath = 'messages'
   private readonly projectsPath = 'projects'
+  private readonly raitingsPath = 'raitings'
   constructor(
     private store: AngularFirestore
   ) { }
@@ -18,7 +19,7 @@ export class PostService {
   }
 
   getAllProjects() {
-    return this.store.collection<{title: string, description: String, images: String[]}>(this.projectsPath).snapshotChanges()
+    return this.store.collection<{title: string, description: String, images: String[]}[]>(this.projectsPath).snapshotChanges()
     .pipe(
       map(changes =>
         changes.map(c =>
@@ -28,11 +29,22 @@ export class PostService {
     )
   }
 
-  addProject() {
-    return this.store.collection(this.projectsPath).add({
-      title: "Systeme de productions des emplois de temps incremental",
-      description: "Il s'agit ici d'une application web permettant de gere les emplois de temps dans les milieus scholaire et universitaire. Il resout les problemes des conflits de periodes en permettant a chaque ensegnant de choisir ses heures de cours dans des salles de classes donnees. Et les emplois de temps peuvent avoir une durree de validite en cas des disponibilites instables des enseignants",
-      images: ["https://firebasestorage.googleapis.com/v0/b/ero-coding-space.appspot.com/o/projects%2Fconfig.png?alt=media&token=6fab3f56-2387-4507-935b-4dfb416930de"]
-    })
+  addProject(project:{ title: string, description: string, images: string[] }) {
+    return this.store.collection(this.projectsPath).add(project)
+  }
+
+  addRaiting(r: {name: string, email: string | null, message: string, stars: number}) {
+    return this.store.collection(this.raitingsPath).add(r)
+  }
+
+  getAllRecommandations() {
+    return this.store.collection<{name: string, email: string | null, message: string, stars: number}[]>(this.raitingsPath).snapshotChanges()
+    .pipe(
+      map(changes =>
+        changes.map(c =>
+          ({ id: c.payload.doc.id, ...c.payload.doc.data() })
+        )
+      )
+    )
   }
 }
