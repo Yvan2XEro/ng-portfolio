@@ -1,4 +1,18 @@
 <h1>Mes realisations</h1>
+<div fxLayout="row wrap" fxLayout.lt="column"  fxLayoutGap="32px" class="statistics-labels mb-30" fxLayoutAlign="space-around center" >
+  <div class="statistic-label-group">
+    <mat-card-title class="accent-color" color="accent">{{ projects.length }}<span>+</span></mat-card-title><span class="text-12">finished projetcts</span>
+  </div>
+  <div class="statistic-label-group">
+    <mat-card-title class="accent-color" color="accent">17<span>+</span></mat-card-title><span class="text-12">personnal projetcts</span>
+  </div>
+  <div class="statistic-label-group">
+    <mat-card-title class="accent-color" color="accent">17<span>+</span></mat-card-title><span class="text-12">references rojetcts</span>
+  </div>
+  <div class="statistic-label-group">
+    <mat-card-title class="accent-color" color="accent">17<span>+</span></mat-card-title><span class="text-12">school finished</span>
+  </div>
+</div>
 <div  fxLayout="row wrap" fxLayout.lt-sm="column"  fxLayoutGap="32px" fxLayoutAlign="flex-start">
   <ng-container *ngFor="let p of projects" >
     <mat-card fxFlex="0 1 calc(33.3% - 32px)" class="primary-theme my-2">

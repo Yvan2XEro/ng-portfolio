@@ -12,18 +12,8 @@ export class NavListComponent implements OnInit {
   public activeHome: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(true)
 
   ngOnInit(): void {
-    this.checkHomeActive()
   }
-
-  checkHomeActive(){
-    if(location.pathname=='/'||location.pathname=='')
-      this.activeHome.next(true)
-    else{
-      this.activeHome.next(false)
-      let hl = document.getElementById('homeLink')
-      if(hl != null)
-        hl.classList.remove('active')
-    }
+  reload() {
+    location.assign('/')
   }
-
 }

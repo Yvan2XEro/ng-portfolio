@@ -12,17 +12,16 @@ import { MatDialogRef } from '@angular/material/dialog';
 })
 export class InputRatingModaleComponent implements OnInit {
   starCount:number = 5;
-
+  flag = "projects"
   starColor:StarRatingColor = StarRatingColor.accent;
   starColorP:StarRatingColor = StarRatingColor.primary;
   starColorW:StarRatingColor = StarRatingColor.warn;
 
-  proffessions = ['Director', 'Devellopper','Other']
   message = {
     email: '',
     name: '',
     message: '',
-    proffession: this.proffessions[0],
+    proffession: 'Devellopper',
     stars: 3
   }
   constructor(
@@ -34,7 +33,6 @@ export class InputRatingModaleComponent implements OnInit {
   ngOnInit(): void {
   }
   send(){
-
     if(this.message.name.length<2 && this.message.message.length < 10) {
       this.snackBar.open('The name and your message are too short!')
     } else if (this.message.message.length <10) {

@@ -23,6 +23,11 @@ $app-default-theme: mat-light-theme(
     ),
   )
 );
+$accent: mat-palette($mat-pink);
+.accent-color {
+  color: mat-color($accent) !important;
+}
+
 .mr-2{
   margin-right: 2px;
 }
@@ -33,11 +38,17 @@ $app-default-theme: mat-light-theme(
   height: 100%;
 }
 .ml-2{
+  margin-left: 10px;
+}
+.ml-4{
   margin-left: 2px;
 }
 .my-2{
     margin-top: 5px;
     margin-bottom: 5px;
+}
+.mb-30{
+  margin-bottom: 30px;
 }
 .text-left{
   text-align: left;

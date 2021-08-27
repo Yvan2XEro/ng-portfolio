@@ -48,7 +48,7 @@ export class RecommandationsListComponent implements OnInit {
   }
 
   openRatingModale() {
-    this.matDialog.open(InputRatingModaleComponent)
+    this.matDialog.open(InputRatingModaleComponent, {autoFocus: false})
     .afterClosed().subscribe(()=>{
       this.ngOnInit()
     })
