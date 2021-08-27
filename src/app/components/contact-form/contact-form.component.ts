@@ -1,6 +1,6 @@
 import { LoaderService } from './../../shared/services/loader.service';
 import { PostService } from './../../shared/services/post.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
@@ -9,6 +9,8 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   styleUrls: ['./contact-form.component.scss']
 })
 export class ContactFormComponent implements OnInit {
+  @Input()
+  title = "Contact me"
   message = {
     email: '',
     name: '',

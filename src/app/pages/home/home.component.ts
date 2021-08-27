@@ -1,5 +1,6 @@
 import { CarouselService } from './../../shared/services/carousel.service';
 import { Component, OnInit } from '@angular/core';
+import { AppComponent } from '../../app.component';
 
 @Component({
   selector: 'app-home',
@@ -9,10 +10,12 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
 
   constructor(
-    public carousel: CarouselService
+    public carousel: CarouselService,
+    private app: AppComponent
   ) { }
 
   ngOnInit(): void {
+    this.app.setTitle('Home')
   }
 
 }

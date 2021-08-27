@@ -3,6 +3,7 @@ import { CarouselService } from './shared/services/carousel.service';
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { Component, ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',
@@ -21,9 +22,12 @@ export class AppComponent {
   constructor(
     private observer: BreakpointObserver,
     public carousel: CarouselService,
-    public loaderService: LoaderService
+    public loaderService: LoaderService,
+    private titleService: Title
   ) { }
-
+  setTitle(title: string) {
+    this.titleService.setTitle(title)
+  }
   ngAfterViewInit() {
     this.observer.observe(['(max-width: 758px)']).subscribe((res) => {
       if (res.matches) {

@@ -55,6 +55,7 @@ import { AdminTechsComponent } from './components/admin-techs/admin-techs.compon
 import { AdminProjectsComponent } from './components/admin-projects/admin-projects.component';
 import { InputRatingModaleComponent } from './components/input-rating-modale/input-rating-modale.component';
 import { RaitingComponent } from './components/input-rating-modale/raiting/raiting.component';
+import { ContactPageComponent } from './pages/contact-page/contact-page.component';
 
 @NgModule({
   declarations: [
@@ -80,6 +81,7 @@ import { RaitingComponent } from './components/input-rating-modale/raiting/raiti
     AdminProjectsComponent,
     InputRatingModaleComponent,
     RaitingComponent,
+    ContactPageComponent,
   ],
   imports: [
     AppRoutingModule,

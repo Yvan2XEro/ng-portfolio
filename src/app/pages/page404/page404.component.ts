@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AppComponent } from '../../app.component';
 
 @Component({
   selector: 'app-page404',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Page404Component implements OnInit {
 
-  constructor() { }
+  constructor(
+    private app: AppComponent
+  ) { }
 
   ngOnInit(): void {
+    this.app.setTitle('Not found')
   }
 
 }
