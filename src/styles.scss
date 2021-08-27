@@ -28,6 +28,12 @@ $accent: mat-palette($mat-pink);
   color: mat-color($accent) !important;
 }
 
+.spacer{
+  flex: 1 1 auto;
+}
+.mt-10{
+  margin-top: 10px;
+}
 .mr-2{
   margin-right: 2px;
 }

@@ -40,15 +40,18 @@ export class InputRatingModaleComponent implements OnInit {
     } else {
       this.postService.addRaiting(this.message)
       .then(()=>{
-        this.matDialogRef.close(true)
+        this.close(true)
         this.snackBar.open('Thank you!', 'close')
       })
       .catch(()=>{
         this.snackBar.open('An error occured, please try later!', 'close')
-        this.matDialogRef.close(false)
+        this.close(false)
       })
     }
 
+  }
+  close(response: boolean) {
+    this.matDialogRef.close(response)
   }
   onRatingChanged(rating:number){
     this.message.stars = rating;

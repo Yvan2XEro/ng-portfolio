@@ -2,6 +2,7 @@ import { LoaderService } from './../../shared/services/loader.service';
 import { TechsService } from './../../shared/services/techs.service';
 import { Component, OnInit } from '@angular/core';
 import { map } from 'rxjs/operators';
+import { AppComponent } from '../../app.component';
 
 @Component({
   selector: 'app-profil',
@@ -42,6 +43,7 @@ export class ProfilComponent implements OnInit {
   constructor(
     private techsService: TechsService,
     private loaderService: LoaderService,
+    public app: AppComponent
   ) { }
 
   ngOnInit(): void {
@@ -85,6 +87,10 @@ export class ProfilComponent implements OnInit {
       default:
         return this.techs;
     }
+  }
+
+  close() {
+    this.app.showSidebar = false
   }
 
 }

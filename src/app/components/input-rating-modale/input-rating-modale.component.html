@@ -1,5 +1,8 @@
-<div class="primary-theme contact-block">
-  <mat-card-title>Contact me</mat-card-title>
+<div class="primary-theme contact-block raiting-modal">
+  <div>
+    <button class="btn-close" (click)="close(false)"  mat-button color="warn"><mat-icon color="warn">close</mat-icon></button>
+  </div>
+  <mat-card-title >Recommanandation</mat-card-title>
   <app-raiting [rating]="message.stars"  [starCount]="starCount"  [color]="starColor" (ratingUpdated)="onRatingChanged($event)"></app-raiting>
   <mat-radio-group [(ngModel)]="message.proffession">
     <mat-radio-button value="Director">Director</mat-radio-button>
