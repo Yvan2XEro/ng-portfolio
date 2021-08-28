@@ -23,6 +23,7 @@ mat-list-item {
     color: white;
 }
 .scroll-content{
+    cursor: grabbing;
     overflow-y: auto;
     position: fixed;
     top: $profile-height;

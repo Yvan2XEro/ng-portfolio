@@ -1,42 +1,18 @@
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Component, Inject, OnInit } from '@angular/core';
-import { trigger, transition, query, style, animate, group } from '@angular/animations';
-
-
-const left = [
-  query(':enter, :leave', style({ position: 'fixed', width: '200px' }), { optional: true }),
-  group([
-    query(':enter', [style({ transform: 'translateX(-200px)' }), animate('.3s ease-out', style({ transform: 'translateX(0%)' }))], {
-      optional: true,
-    }),
-    query(':leave', [style({ transform: 'translateX(0%)' }), animate('.3s ease-out', style({ transform: 'translateX(200px)' }))], {
-      optional: true,
-    }),
-  ]),
-];
-
-const right = [
-  query(':enter, :leave', style({ position: 'fixed', width: '200px' }), { optional: true }),
-  group([
-    query(':enter', [style({ transform: 'translateX(200px)' }), animate('.3s ease-out', style({ transform: 'translateX(0%)' }))], {
-      optional: true,
-    }),
-    query(':leave', [style({ transform: 'translateX(0%)' }), animate('.3s ease-out', style({ transform: 'translateX(-200px)' }))], {
-      optional: true,
-    }),
-  ]),
-];
-
+import { trigger, transition, style, animate } from '@angular/animations';
 
 @Component({
   selector: 'app-lightbox',
   templateUrl: './lightbox.component.html',
   styleUrls: ['./lightbox.component.scss'],
-  animations: [
-    trigger('animImageSlider', [
-      transition(':increment', right),
-      transition(':decrement', left),
-    ]),
+  animations:  [
+    trigger('fade', [
+      transition('void => *', [
+        style({ opacity: 0 }),
+        animate(5000, style({opacity: 1}))
+      ])
+    ])
   ]
 })
 export class LightboxComponent implements OnInit {

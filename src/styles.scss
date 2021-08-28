@@ -133,7 +133,12 @@ $accent: mat-palette($mat-pink);
     font-size: 17px;
   }
 }
-
+.transparent-font{
+  background: transparent;
+}
+.w-60{
+  min-width: 60%;
+}
 .article-icon{
   background: linear-gradient(159deg, #2d2d3a 0%, #2b2b35 100%);
   padding: 2px;

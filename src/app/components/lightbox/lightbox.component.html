@@ -4,6 +4,6 @@
   </div>
   <mat-icon *ngIf="i<images.length-1" class="btn-lightbox btn-next" (click)="next()" color="warn">arrow_forward_ios</mat-icon>
   <mat-icon *ngIf="i>0" class="btn-lightbox btn-prev" (click)="prev()" color="warn">arrow_back_ios</mat-icon>
-  <app-lightbox-image [@animImageSlider]="indexedImage" [imageUrl]="indexedImage"></app-lightbox-image>
+  <app-lightbox-image [@fade]="indexedImage" [imageUrl]="indexedImage"></app-lightbox-image>
   <p class="label-image-number" style="color: red;">{{ i+1 }}/ {{ images.length }}</p>
 </div>

@@ -57,7 +57,6 @@ import { InputRatingModaleComponent } from './components/input-rating-modale/inp
 import { RaitingComponent } from './components/input-rating-modale/raiting/raiting.component';
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
 import { AboutComponent } from './pages/about/about.component';
-import { ArticlesComponent } from './pages/blog/articles/articles.component';
 import { ShowArticleComponent } from './pages/blog/show-article/show-article.component';
 
 @NgModule({
@@ -86,7 +85,6 @@ import { ShowArticleComponent } from './pages/blog/show-article/show-article.com
     InputRatingModaleComponent,
     RaitingComponent,
     ContactPageComponent,
-    ArticlesComponent,
     ShowArticleComponent,
   ],
   imports: [
