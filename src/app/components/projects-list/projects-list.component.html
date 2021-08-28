@@ -16,7 +16,7 @@
 <div  fxLayout="row wrap" fxLayout.lt-sm="column"  fxLayoutGap="32px" fxLayoutAlign="flex-start">
   <ng-container *ngFor="let p of projects" >
     <mat-card fxFlex="0 1 calc(33.3% - 32px)" class="primary-theme my-2">
-        <img (click)="openLightbox(p.images)" width="50px" class="article-icon pointer" height="50px" [src]="p.images[0]" alt="img techs" srcset="">
+        <img (click)="openLightbox(p.images)" width="50px" class="article-icon pointer scallabe" height="50px" [src]="p.images[0]" alt="img techs" srcset="">
         <mat-card-header>
             <mat-card-title>{{p.title}}</mat-card-title>
         </mat-card-header>

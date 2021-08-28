@@ -6,12 +6,13 @@
 }
 
 $bg-color: linear-gradient(159deg, rgba(37, 37, 50, 0.98) 0%, rgba(35, 35, 45, 0.98) 100%);
-$profile-height: 300pxpx;
+$profile-height: 326px;
 .fixed-top{
   top: 0;
   left: 0;
   width: 100%;
   height: $profile-height;
+  min-height: $profile-height;
   background: $bg-color;
   scrollbar-width: none;
 }
@@ -24,7 +25,7 @@ mat-list-item {
 .scroll-content{
     overflow-y: auto;
     position: fixed;
-    top: 326px;
+    top: $profile-height;
     bottom: 50px;
     left: 0;
     border-radius: 5px;

@@ -56,6 +56,9 @@ import { AdminProjectsComponent } from './components/admin-projects/admin-projec
 import { InputRatingModaleComponent } from './components/input-rating-modale/input-rating-modale.component';
 import { RaitingComponent } from './components/input-rating-modale/raiting/raiting.component';
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
+import { AboutComponent } from './pages/about/about.component';
+import { ArticlesComponent } from './pages/blog/articles/articles.component';
+import { ShowArticleComponent } from './pages/blog/show-article/show-article.component';
 
 @NgModule({
   declarations: [
@@ -70,6 +73,7 @@ import { ContactPageComponent } from './pages/contact-page/contact-page.componen
     TechsListComponent,
     TechArticlesComponent,
     ContactFormComponent,
+    AboutComponent,
     NavListComponent,
     ServicesListComponent,
     ProjectsListComponent,
@@ -82,6 +86,8 @@ import { ContactPageComponent } from './pages/contact-page/contact-page.componen
     InputRatingModaleComponent,
     RaitingComponent,
     ContactPageComponent,
+    ArticlesComponent,
+    ShowArticleComponent,
   ],
   imports: [
     AppRoutingModule,

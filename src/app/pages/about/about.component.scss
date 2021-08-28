@@ -1,0 +1,78 @@
+$bg-color: linear-gradient(159deg, rgba(37, 37, 50, 0.98) 0%, rgba(35, 35, 45, 0.98) 100%);
+.timeline-block{
+  box-sizing: border-box;
+  padding-left: 15px;
+}
+.timeline-container{
+  margin: auto;
+  max-width: 400px;
+  border-left: 4px solid rgba(37, 37, 50, 0.98);
+  padding-left: 25px;
+}
+.timeline-event{
+  position: relative;
+  margin-top: 20px;
+  transition: all .5s;
+  cursor: pointer;
+}
+.timeline-event::before{
+  content: '';
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  border: 2px solid #fff;
+  left: -36px;
+  border-radius: 50%;
+  background: rgba(37, 37, 50, 0.98);
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all .5s;
+}
+.timeline-event::after{
+  content: '';
+	position: absolute;
+	left: 0;
+	top: 45%;
+	width: 0;
+	height: 0;
+	border: 16px solid transparent;
+	border-right-color: #2d2d3a;
+    box-shadow: 0 1px #2d2d3a;
+	border-left: 0;
+	border-bottom: 0;
+	margin-top: -14.5px;
+	margin-left: -16px;
+}
+.timeline-event:hover::before{
+  border: 2px solid #e91e63 ;
+  transition: all .5s;
+}
+.event-date{
+  position: absolute;
+  font-size: 10px;
+  left: -90px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: bold;
+}
+@media only screen and (max-width: 1000px) {
+  .event-date{
+    position: static;
+  }
+}
+@media only screen and (min-width: 526px) and (max-width: 598px){
+  .event-date{
+    position: absolute;
+    font-size: 10px;
+    left: -90px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: bold;
+  }
+}
+@media only screen and (min-width: 1004px) and (max-width: 1312px){
+  .event-date{
+    position: static;
+  }
+}
+

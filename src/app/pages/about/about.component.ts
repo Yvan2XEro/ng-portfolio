@@ -2,18 +2,18 @@ import { Component, OnInit } from '@angular/core';
 import { AppComponent } from 'src/app/app.component';
 
 @Component({
-  selector: 'app-blog',
-  templateUrl: './blog.component.html',
-  styleUrls: ['./blog.component.scss']
+  selector: 'app-about',
+  templateUrl: './about.component.html',
+  styleUrls: ['./about.component.scss']
 })
-export class BlogComponent implements OnInit {
+export class AboutComponent implements OnInit {
 
   constructor(
     private app: AppComponent
   ) { }
 
   ngOnInit(): void {
-    this.app.setTitle('Blog');
+    this.app.setTitle('About')
   }
 
 }

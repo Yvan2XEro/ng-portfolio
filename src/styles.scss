@@ -2,6 +2,7 @@
 @import "~@angular/material/theming";
 @import '~ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
 @import '~ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
+
 @include mat-core();
 
 
@@ -33,6 +34,12 @@ $accent: mat-palette($mat-pink);
 }
 .mt-10{
   margin-top: 10px;
+}
+.mt-30{
+  margin-top: 30px;
+}
+.medium-title{
+  font-size: 20px;
 }
 .mr-2{
   margin-right: 2px;
