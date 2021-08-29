@@ -58,6 +58,7 @@ import { RaitingComponent } from './components/input-rating-modale/raiting/raiti
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ShowArticleComponent } from './pages/blog/show-article/show-article.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -86,6 +87,7 @@ import { ShowArticleComponent } from './pages/blog/show-article/show-article.com
     RaitingComponent,
     ContactPageComponent,
     ShowArticleComponent,
+    FooterComponent,
   ],
   imports: [
     AppRoutingModule,

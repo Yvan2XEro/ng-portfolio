@@ -82,7 +82,9 @@ $accent: mat-palette($mat-pink);
 .mr-2{
   margin-right: 8px;
 }
-
+.ml-auto{
+  margin-left: auto;
+}
 .text-center{
   text-align: center
 }
@@ -133,12 +135,32 @@ $accent: mat-palette($mat-pink);
     font-size: 17px;
   }
 }
+
 .transparent-font{
   background: transparent;
 }
 .w-60{
   min-width: 60%;
 }
+.decoration-none{
+  text-decoration: none;
+}
+
+
+// pour le font opaque
+.opaque-label{
+  display: inline-block;
+  color: silver;
+  padding-bottom: 5px;
+  background: linear-gradient(159deg, #252532 0%, #23232d 100%);
+  min-width: 70px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding: 2px;
+  font-size: 10px;
+  text-align: center;
+}
+
 .article-icon{
   background: linear-gradient(159deg, #2d2d3a 0%, #2b2b35 100%);
   padding: 2px;

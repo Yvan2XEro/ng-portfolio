@@ -1,1 +1,12 @@
-<p>show-article works!</p>
+<div class="article-block primary-theme">
+  <div class="article-header">
+    <h1 class="article-title">{{ article?.title }}</h1>
+    <div fxLayout="row" fxLayoutAlign="space-between">
+      <p class="opaque-label"> {{article?.category}} </p>
+        <p class="text-white ml-2">Auteur: <span class="opaque-label"> {{article?.author}} </span></p>
+    </div>
+    <img class="article-image" [src]="article?.image" >
+  </div>
+  <div class="article-text-content post-content text-secondary"> {{article?.text}}{{article?.text}}{{article?.text}}{{article?.text}}{{article?.text}}{{article?.text}}{{article?.text}}{{article?.text}}{{article?.text}} </div>
+</div>
+<!-- opaque-label -->

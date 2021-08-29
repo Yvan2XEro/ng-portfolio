@@ -15,7 +15,8 @@ const routes: Routes = [
   { path: "blog", component: BlogComponent, },
   { path: "blog/articles/:slug", component: ShowArticleComponent },
   { path: "admin", component: AdminComponent },
-  { path: "**", component: Page404Component },
+  { path: "not-found", component: Page404Component },
+  { path: "**", redirectTo: "not-found" },
 ];
 
 @NgModule({

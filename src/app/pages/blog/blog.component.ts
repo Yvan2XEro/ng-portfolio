@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AppComponent } from 'src/app/app.component';
+import { PostService } from 'src/app/shared/services/post.service';
 
 @Component({
   selector: 'app-blog',
@@ -9,11 +10,16 @@ import { AppComponent } from 'src/app/app.component';
 export class BlogComponent implements OnInit {
 
   constructor(
-    private app: AppComponent
+    private app: AppComponent,
+    private postService: PostService
   ) { }
+
+  articles: any[] = []
 
   ngOnInit(): void {
     this.app.setTitle('Blog');
+    this.postService.getAllArticles()
+    .subscribe(articles => this.articles = articles)
   }
 
 }

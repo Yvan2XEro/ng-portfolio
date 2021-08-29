@@ -1,0 +1,16 @@
+.article-block{
+  margin: auto;
+  padding: 25px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  .article-header{
+    .article-image{
+      max-width: 270px;
+    }
+  }
+  .article-text-content{
+    h2,h3,h4,h5{
+      text-align: center;
+    }
+  }
+}
