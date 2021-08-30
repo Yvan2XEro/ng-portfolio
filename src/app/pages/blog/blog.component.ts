@@ -15,11 +15,16 @@ export class BlogComponent implements OnInit {
   ) { }
 
   articles: any[] = []
-
+  selectedCategorie = ''
   ngOnInit(): void {
     this.app.setTitle('Blog');
     this.postService.getAllArticles()
-    .subscribe(articles => this.articles = articles)
+    .subscribe(articles => {
+      this.articles = articles
+    })
+  }
+  filterArticles() {
+    return this.articles.filter(article => article.category.includes(this.selectedCategorie))
   }
 
 }

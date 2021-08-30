@@ -3,16 +3,16 @@
     <div>
       <div class="spacer"></div>
       <div fxLayout="row wrap"  class="ml-auto w-60">
-        <button mat-button class="text-white">Toutes</button>
-        <button mat-button class="text-white">Higth techs</button>
-        <button mat-button class="text-secondary">Code astuces</button>
-        <button mat-button class="text-secondary">Dev environment</button>
+        <button mat-button (click)="selectedCategorie = ''" [class]="selectedCategorie==''?'text-white':'text-secondary'">Toutes</button>
+        <button mat-button (click)="selectedCategorie = 'Hight techs'" [class]="selectedCategorie=='Hight techs'?'text-white':'text-secondary'">Higth techs</button>
+        <button mat-button (click)="selectedCategorie = 'Code astuces'" [class]="selectedCategorie=='Code astuces'?'text-white':'text-secondary'">Code astuces</button>
+        <button mat-button (click)="selectedCategorie = 'Dev environment'" [class]="selectedCategorie=='Dev environment'?'text-white':'text-secondary'">Dev environment</button>
       </div>
     </div>
   </div>
   <div fxLayout="row wrap" fxLayout.lt-sm="column" fxLayoutGap="32px" fxLayoutAlign="flex-start">
     <ng-container>
-      <mat-card *ngFor="let a of articles" fxFlex="0 1 calc(33.3% - 32px)" class="primary-theme my-2">
+      <mat-card *ngFor="let a of filterArticles()" fxFlex="0 1 calc(33.3% - 32px)" class="primary-theme my-2">
         <a class="text-white decoration-none" [routerLink]="'/blog/articles/'+a.slug" >
           <mat-card-header>
             <div mat-card-avatar class="example-header-image"></div>
