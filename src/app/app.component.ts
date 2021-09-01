@@ -37,6 +37,7 @@ export class AppComponent {
         this.mobileDevice = true
         this.showToolbar = true
         this.showNavbar = false
+        this.listenNavlinkClick()
       } else {
         this.carousel.showCarousel$.next(true)
         this.sidenav.mode = 'side'
@@ -44,7 +45,22 @@ export class AppComponent {
         this.mobileDevice = false
         this.showToolbar = false
         this.showNavbar = true
+        this.stopListeningNavLinkClick()
       }
     });
+  }
+  listenNavlinkClick() {
+    document.querySelectorAll('.nav-link').forEach(link =>{
+      link.addEventListener('click', this.hideNav)
+    })
+  }
+  stopListeningNavLinkClick() {
+    document.querySelectorAll('.nav-link').forEach(link =>{
+      link.removeEventListener('click', this.hideNav)
+    })
+  }
+
+  private hideNav =()=> {
+    this.showNavbar = false
   }
 }

@@ -5,8 +5,8 @@
       <p class="opaque-label"> {{article?.category}} </p>
         <p class="text-white ml-2">Auteur: <span class="opaque-label"> {{article?.author}} </span></p>
     </div>
-    <img class="article-image" [src]="article?.image" >
+    <img mat-card-image class="article-image" [src]="article?.image" >
   </div>
-  <div class="article-text-content post-content text-secondary"> {{article?.text}}{{article?.text}}{{article?.text}}{{article?.text}}{{article?.text}}{{article?.text}}{{article?.text}}{{article?.text}}{{article?.text}} </div>
+  <div class="post-content text-secondary" [innerHTML]="article?.text"></div>
 </div>
 <!-- opaque-label -->
