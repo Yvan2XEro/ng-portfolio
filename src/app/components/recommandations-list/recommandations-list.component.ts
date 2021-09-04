@@ -17,7 +17,7 @@ export class RecommandationsListComponent implements OnInit {
   customOptions: OwlOptions = {
     loop: false,
     mouseDrag: true,
-    touchDrag: false,
+    touchDrag: true,
     pullDrag: false,
     dots: false,
     navSpeed: 600,
