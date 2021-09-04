@@ -1,5 +1,11 @@
 {
   "A_PROPOS": "A propos",
+  "BlogPage": {
+    "TOUTES": "Toutes",
+    "HT": "Hautes technologies",
+    "ASTUCES_CODE": "Astuces code",
+    "ENVIRONEMENT_DEV": "Environements de dev"
+  },
   "AboutPage": {
     "EDUCATION": "Education",
     "LBS": "Lycée de Bafou-Sud",
@@ -17,7 +23,7 @@
     "APPS_WEB": "Applications webs",
     "APPS_WEB_DETAILS": "Je commence le dévellopement web en Avril 2020 pandant le confinement en mettant en place une plateforme pour gérer la publication des notes dans un lycée",
     "TECHS": "Technologies modernes",
-    "TECHS_LISTS":" Je découvre les frameworks Symfony et React  et je m'en sert pour mettre en place un systeme de suivi en ligne des patients, juste apres je découvre aussi Vue JS, Spring, Laravel, Angular, Django  ainsi que plusieures outils de dévellopement fronted",
+    "TECHS_LISTS": " Je découvre les frameworks Symfony et React  et je m'en sert pour mettre en place un systeme de suivi en ligne des patients, juste apres je découvre aussi Vue JS, Spring, Laravel, Angular, Django  ainsi que plusieures outils de dévellopement fronted",
     "TDD_EXAGONAL": "TDD et architechture Exagonal",
     "DETAILS_TDD_EXAGONAL": "Je commence a approffondir les méilleures pratiques de dévellopement en pratiquant le TDD(Test Driven Development) en PHP en Janvier 2021 et je découvre aussi l'architechture Exagonal qui était déja jugé plus intéressant que le MVC"
   }

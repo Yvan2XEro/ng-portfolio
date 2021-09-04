@@ -21,6 +21,6 @@
 >{{ "A_PROPOS" | translate}}</a>
 
 <div class="fixed-bottom ">
-  <a class="nav-link d-block " (click)="changeLocale('fr')" [class]="lang=='fr'?'active':''">FR</a>
-  <a class="nav-link d-block " (click)="changeLocale('en')" [class]="lang=='en'?'active':''">EN</a>
+  <a class="nav-link d-block " (click)="changeLocale('fr')" [class]="localService.lang$.value=='fr'?'active':''">FR</a>
+  <a class="nav-link d-block " (click)="changeLocale('en')" [class]="localService.lang$.value=='en'?'active':''">EN</a>
 </div>

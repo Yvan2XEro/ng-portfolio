@@ -1,6 +1,7 @@
 import { BehaviorSubject } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import { LocalService } from '../../shared/services/local.service';
 
 @Component({
   selector: 'app-nav-list',
@@ -10,15 +11,13 @@ import { TranslateService } from '@ngx-translate/core';
 export class NavListComponent implements OnInit {
 
   constructor(
-    public translateService: TranslateService
+    public translateService: TranslateService,
+    public localService: LocalService
   ) { }
-  lang = ''
   public activeHome: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(true)
 
   ngOnInit(): void {
-    this.lang = localStorage.getItem('lang') || 'fr'
-    this.translateService.setDefaultLang('fr')
-    this.translateService.use(this.lang)
+    this.localService.lang$.next(localStorage.getItem('lang') || 'fr')
   }
   reload() {
     location.assign('/')
@@ -26,7 +25,7 @@ export class NavListComponent implements OnInit {
 
   changeLocale(lang: string) {
     localStorage.setItem('lang', lang)
-    this.lang = lang
-    location.reload()
+    this.translateService.use(lang)
+    this.localService.lang$.next(lang)
   }
 }

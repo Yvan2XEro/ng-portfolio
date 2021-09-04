@@ -3,10 +3,10 @@
     <div>
       <div class="spacer"></div>
       <div fxLayout="row wrap"  class="ml-auto w-60">
-        <button mat-button (click)="selectedCategorie = ''" [class]="selectedCategorie==''?'text-white':'text-secondary'">Toutes</button>
-        <button mat-button (click)="selectedCategorie = 'Hight techs'" [class]="selectedCategorie=='Hight techs'?'text-white':'text-secondary'">Higth techs</button>
-        <button mat-button (click)="selectedCategorie = 'Code astuces'" [class]="selectedCategorie=='Code astuces'?'text-white':'text-secondary'">Code astuces</button>
-        <button mat-button (click)="selectedCategorie = 'Dev environment'" [class]="selectedCategorie=='Dev environment'?'text-white':'text-secondary'">Dev environment</button>
+        <button mat-button (click)="selectedCategorie = ''" [class]="selectedCategorie==''?'text-white':'text-secondary'">{{ "BlogPage.TOUTES" | translate }}</button>
+        <button mat-button (click)="selectedCategorie = 'Hight techs'" [class]="selectedCategorie=='Hight techs'?'text-white':'text-secondary'">{{ "BlogPage.HT" | translate}}</button>
+        <button mat-button (click)="selectedCategorie = 'Code astuces'" [class]="selectedCategorie=='Code astuces'?'text-white':'text-secondary'">{{ "BlogPage.ASTUCES_CODE" | translate}}</button>
+        <button mat-button (click)="selectedCategorie = 'Dev environment'" [class]="selectedCategorie=='Dev environment'?'text-white':'text-secondary'">{{ "BlogPage.ENVIRONEMENT_DEV" | translate}}</button>
       </div>
     </div>
   </div>

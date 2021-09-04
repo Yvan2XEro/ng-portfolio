@@ -1,25 +1,30 @@
 {
   "A_PROPOS": "About",
-  "AboutPage":{
+  "BlogPage": {
+    "TOUTES": "All",
+    "HT": "High techs",
+    "ASTUCES_CODE": "Code stricks",
+    "ENVIRONEMENT_DEV": "Dev tools"
+  },
+  "AboutPage": {
     "EDUCATION": "Education",
     "LBS": "Bafou-Sud high school",
     "LBS_INSCRIPTION": "I enrolled in Bafou-Sud high school in 2011 in my native village, and that's where I finished my entire secondary education",
     "BACC": "Baccalaureat C",
     "BAC_OPTENTION": "J ' obtained my Baccalaureate in 2018 after 7 years of studies spent in Bafou-Sud with a passable but sufficient mension for me to register at UDs",
     "INF_TRONC_COMMUN": "Common core computer science",
-  "INF_TRONC_COMMUN_INSCRIPTION": "In October 2018, I enrolled at Dschang University in common core computer science, and that's where I really had the opportunity to type my first lines of code with C languages / C ++, PASCAL and HASKELL",
-  "LICENCE": "Bachelor in Computer Science Common core",
-  "LICENCE_OPT": "After 3 years of studies at the University of Dschang, I obtained the license in August 2021, which will allow me to register for a master's degree in IA",
-  "IA": " Artificial Intelligence",
-  "IA_INS": "Je m'inscrit e master Intéligence Artificiel en septembre 2021",
-  "EXPERIENCE": "Experiment",
-  "FIRSTS_APPS": "I reproduce the Sokoban game in January 2019 with the SDL library of the C language. I also reproduce 2 Crypto-Systems (supering encryption, decryption and cryptanalysis): that of Caesar and Crypto-Systeme with matrices with the language JAVA",
-  "APPS_WEB": "Web applications",
-  "APPS_WEB_DETAILS": "I am starting web development in April 2020 pandering the confinement by setting up a platform to manage the publication of grades in a high school",
-  "TECHS": "Modern technologies",
-  "TECHS_LISTS": "I discovered the Symfony and React frameworks and I used them to set up an online patient monitoring system, just after I also discovered Vue JS, Spring, Laravel, Angular, Django as well as several tools fronted development",
-  "TDD_EXAGONAL": "TDD and Exagonal architechture",
-  "DETAILS_TDD_EXAGONAL": "I started to learn the best development practices by practicing TDD (Test Driven Development) in PHP in January 2021 and I also discovered the Exagonal architecture which was already considered more interesting than the MVC"
-
+    "INF_TRONC_COMMUN_INSCRIPTION": "In October 2018, I enrolled at Dschang University in common core computer science, and that's where I really had the opportunity to type my first lines of code with C languages / C ++, PASCAL and HASKELL",
+    "LICENCE": "Bachelor in Computer Science Common core",
+    "LICENCE_OPT": "After 3 years of studies at the University of Dschang, I obtained the license in August 2021, which will allow me to register for a master's degree in IA",
+    "IA": " Artificial Intelligence",
+    "IA_INS": "Je m'inscrit e master Intéligence Artificiel en septembre 2021",
+    "EXPERIENCE": "Experiment",
+    "FIRSTS_APPS": "I reproduce the Sokoban game in January 2019 with the SDL library of the C language. I also reproduce 2 Crypto-Systems (supering encryption, decryption and cryptanalysis): that of Caesar and Crypto-Systeme with matrices with the language JAVA",
+    "APPS_WEB": "Web applications",
+    "APPS_WEB_DETAILS": "I am starting web development in April 2020 pandering the confinement by setting up a platform to manage the publication of grades in a high school",
+    "TECHS": "Modern technologies",
+    "TECHS_LISTS": "I discovered the Symfony and React frameworks and I used them to set up an online patient monitoring system, just after I also discovered Vue JS, Spring, Laravel, Angular, Django as well as several tools fronted development",
+    "TDD_EXAGONAL": "TDD and Exagonal architechture",
+    "DETAILS_TDD_EXAGONAL": "I started to learn the best development practices by practicing TDD (Test Driven Development) in PHP in January 2021 and I also discovered the Exagonal architecture which was already considered more interesting than the MVC"
   }
 }
