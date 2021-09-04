@@ -27,5 +27,6 @@ export class NavListComponent implements OnInit {
   changeLocale(lang: string) {
     localStorage.setItem('lang', lang)
     this.lang = lang
+    location.reload()
   }
 }

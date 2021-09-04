@@ -1,3 +1,24 @@
 {
-  "test": "fra"
+  "A_PROPOS": "A propos",
+  "AboutPage": {
+    "EDUCATION": "Education",
+    "LBS": "Lycée de Bafou-Sud",
+    "LBS_INSCRIPTION": "Je me suis inscrit au lycée de Bafou-Sud en 2011 dans mon village natal, et c'est la que j'ai finis tout mon parcours secondaire",
+    "BACC": "Baccalaureat C",
+    "BAC_OPTENTION": "J'obtient mon Baccalauréat en 2018 apres 7 annees d'études passes a Bafou-Sud avec une mension passable mais sufisant pour que je m'inscrité a l'UDs",
+    "INF_TRONC_COMMUN": "Informatique tronc commun",
+    "INF_TRONC_COMMUN_INSCRIPTION": "En Octobre 2018, je m'inscrit a l'université de Dschang en Informatique tronc commun, et c'est la que j'ai vraiment eu l'occasion de tapper mes premiers ligne de code avec les languages C/C++, PASCAL et HASKELL",
+    "LICENCE": "Licence en Informatique Tronc commun",
+    "LICENCE_OPT": "Apres 3 ans d'études a l'université de Dschang, j'obitient La licence en Aout 2021, ce qui me permettra de m'inscrire en master I.A",
+    "IA": "Intéligence Artificiel",
+    "IA_INS": "Je m'inscrit e master Intéligence Artificiel en septembre 2021",
+    "EXPERIENCE": "Expérience",
+    "FIRSTS_APPS": "Je reproduis le Jeu de Sokoban en janvier 2019 avec la librairie SDL du language C. Je reproduit également 2 Crypto-Systemes(suporntant les Chiffrements, déchiffrements et cryptanalyses): celui de César et Crypto-Systeme avec matrices avec le language JAVA",
+    "APPS_WEB": "Applications webs",
+    "APPS_WEB_DETAILS": "Je commence le dévellopement web en Avril 2020 pandant le confinement en mettant en place une plateforme pour gérer la publication des notes dans un lycée",
+    "TECHS": "Technologies modernes",
+    "TECHS_LISTS":" Je découvre les frameworks Symfony et React  et je m'en sert pour mettre en place un systeme de suivi en ligne des patients, juste apres je découvre aussi Vue JS, Spring, Laravel, Angular, Django  ainsi que plusieures outils de dévellopement fronted",
+    "TDD_EXAGONAL": "TDD et architechture Exagonal",
+    "DETAILS_TDD_EXAGONAL": "Je commence a approffondir les méilleures pratiques de dévellopement en pratiquant le TDD(Test Driven Development) en PHP en Janvier 2021 et je découvre aussi l'architechture Exagonal qui était déja jugé plus intéressant que le MVC"
+  }
 }

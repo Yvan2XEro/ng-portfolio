@@ -17,7 +17,6 @@ export class RequestInterceptor implements HttpInterceptor {
   ) {}
 
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
-    alert('Interceptor')
     this.loaderService.isLoading.next(true)
     return next.handle(request)
     .pipe(

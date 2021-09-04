@@ -13,12 +13,12 @@
   routerLinkActive="active"
   [routerLinkActiveOptions]="{exact: true}"
   routerLink="/contacts"
->Contact me</a>
+>Contacts</a>
 <a class="nav-link text-left text-white d-block"
   routerLinkActive="active"
   [routerLinkActiveOptions]="{exact: true}"
   routerLink="/about"
->About</a>
+>{{ "A_PROPOS" | translate}}</a>
 
 <div class="fixed-bottom ">
   <a class="nav-link d-block " (click)="changeLocale('fr')" [class]="lang=='fr'?'active':''">FR</a>
