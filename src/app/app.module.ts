@@ -44,7 +44,7 @@ import { TechsListComponent } from './components/techs-list/techs-list.component
 import { TechArticlesComponent } from './components/tech-articles/tech-articles.component';
 import { ContactFormComponent } from './components/contact-form/contact-form.component';
 import { NavListComponent } from './components/nav-list/nav-list.component';
-import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HttpClient, HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ServicesListComponent } from './components/services-list/services-list.component';
 import { ProjectsListComponent } from './components/projects-list/projects-list.component';
 import { RecommandationsListComponent } from './components/recommandations-list/recommandations-list.component';
@@ -59,6 +59,12 @@ import { ContactPageComponent } from './pages/contact-page/contact-page.componen
 import { AboutComponent } from './pages/about/about.component';
 import { ShowArticleComponent } from './pages/blog/show-article/show-article.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
 
 @NgModule({
   declarations: [
@@ -101,6 +107,7 @@ import { FooterComponent } from './components/footer/footer.component';
     FlexLayoutModule,
     FormsModule,
     HTMLEscapeUnescapeModule,
+    HttpClientModule,
     LayoutModule,
     MatBadgeModule,
     MatSnackBarModule,
@@ -122,6 +129,13 @@ import { FooterComponent } from './components/footer/footer.component';
     MatProgressBarModule,
     MatRadioModule,
     MatToolbarModule,
+    TranslateModule.forRoot({
+      loader: {
+          provide: TranslateLoader,
+          useFactory: HttpLoaderFactory,
+          deps: [HttpClient],
+      }
+    })
   ],
   entryComponents: [
     InputTechsModalComponent,
@@ -129,7 +143,8 @@ import { FooterComponent } from './components/footer/footer.component';
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: RequestInterceptor, multi: true },
+    HttpClient,
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }
