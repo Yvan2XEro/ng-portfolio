@@ -14,6 +14,12 @@
     "ANS": "ans",
     "MES_TECHS": "Mes technologies"
   },
+  "ContactFormComponent": {
+    "ME_CONTACTER": "Me contacter",
+    "ENVOYER": "Envoyer",
+    "NOM": "Nom complet",
+    "EMAIL": "Adresse é-mail"
+  },
   "AboutPage": {
     "EDUCATION": "Education",
     "LBS": "Lycée de Bafou-Sud",

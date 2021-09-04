@@ -14,6 +14,12 @@
     "CMR": "Cameroon",
     "MES_TECHS": "My technologies"
   },
+  "ContactFormComponent": {
+    "ME_CONTACTER": "contact me",
+    "ENVOYER": "Send",
+    "NOM": "Full name",
+    "EMAIL": "E-mail adress"
+  },
   "AboutPage": {
     "EDUCATION": "Education",
     "LBS": "Bafou-Sud high school",

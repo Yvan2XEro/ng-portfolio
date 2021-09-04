@@ -18,6 +18,7 @@ export class NavListComponent implements OnInit {
 
   ngOnInit(): void {
     this.localService.lang$.next(localStorage.getItem('lang') || 'fr')
+    this.translateService.use(localStorage.getItem('lang') || 'fr')
   }
   reload() {
     location.assign('/')
