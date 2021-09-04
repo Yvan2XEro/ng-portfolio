@@ -6,6 +6,14 @@
     "ASTUCES_CODE": "Astuces code",
     "ENVIRONEMENT_DEV": "Environements de dev"
   },
+  "ProfileComponent": {
+    "DEV_FULL_STACK": "Développeur Full-Stack",
+    "PAYS": "Pays",
+    "VILLE": "Ville",
+    "CMR": "Cameroun",
+    "ANS": "ans",
+    "MES_TECHS": "Mes technologies"
+  },
   "AboutPage": {
     "EDUCATION": "Education",
     "LBS": "Lycée de Bafou-Sud",

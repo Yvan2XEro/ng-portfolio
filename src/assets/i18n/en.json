@@ -6,6 +6,14 @@
     "ASTUCES_CODE": "Code stricks",
     "ENVIRONEMENT_DEV": "Dev tools"
   },
+  "ProfileComponent": {
+    "DEV_FULL_STACK": "Full-Stack Developer",
+    "PAYS": "Country",
+    "ANS": "years",
+    "VILLE": "City",
+    "CMR": "Cameroon",
+    "MES_TECHS": "My technologies"
+  },
   "AboutPage": {
     "EDUCATION": "Education",
     "LBS": "Bafou-Sud high school",

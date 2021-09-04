@@ -4,26 +4,26 @@
       <img class="avatar" src="https://gitlab.com/uploads/-/system/user/avatar/6049371/avatar.png?width=400" alt="Photo of a Shiba">
       <p>
           <strong>Yvan KANA </strong><br>
-          Developpeur Full-Stack
+          {{ "ProfileComponent.DEV_FULL_STACK" | translate }}
       </p>
       <mat-divider></mat-divider>
         <ul class="mr-2">
             <li class="d-flex f-just-bet">
                 <h5 class="bold">Age:</h5>
-                <span class="text-12 text-secondary">{{ age }} ans</span>
+                <span class="text-12 text-secondary">{{ age }} {{ "ProfileComponent.ANS" | translate }}</span>
             </li>
             <li class="d-flex f-just-bet">
-                <h5 class="bold">Pays:</h5>
-                <span class="text-12 text-secondary">Cameroun</span>
+                <h5 class="bold"> {{ "ProfileComponent.PAYS" | translate }}:</h5>
+                <span class="text-12 text-secondary">{{ "ProfileComponent.CMR" | translate }}</span>
             </li>
             <li class="d-flex f-just-bet">
-                <h5 class="bold">Ville:</h5>
+                <h5 class="bold">{{ "ProfileComponent.VILLE" | translate }}:</h5>
                 <span class="text-12 text-secondary">Dschang</span>
             </li>
         </ul>
       <mat-divider></mat-divider>
       <br>
-      <h2>Mes technologies</h2>
+      <h2>{{ "ProfileComponent.MES_TECHS" | translate }}</h2>
     </div>
     <div class="techs-content">
       <div class="scroll-content">
