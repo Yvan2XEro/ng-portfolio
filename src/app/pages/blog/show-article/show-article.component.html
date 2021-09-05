@@ -1,12 +1,14 @@
 <div class="article-block primary-theme">
+  <div class="mb-30">
+    <a routerLink="/blog" mat-button> <mat-icon class="mat-18">keyboard_double_arrow_left</mat-icon>{{ "ShowArticlePage.RETOUR" | translate }}</a>
+  </div>
   <div class="article-header">
     <h1 class="article-title">{{ article?.title }}</h1>
     <div fxLayout="row" fxLayoutAlign="space-between">
       <p class="opaque-label"> {{article?.category}} </p>
-        <p class="text-white ml-2">Auteur: <span class="opaque-label"> {{article?.author}} </span></p>
+        <p class="text-white ml-2">{{ "ShowArticlePage.AUTEUR" | translate }}: <span class="opaque-label"> {{article?.author}} </span></p>
     </div>
     <img mat-card-image class="article-image" [src]="article?.image" >
   </div>
   <div class="post-content text-secondary" [innerHTML]="article?.text"></div>
 </div>
-<!-- opaque-label -->

@@ -20,6 +20,13 @@
     "NOM": "Nom complet",
     "EMAIL": "Adresse é-mail"
   },
+  "ShowArticlePage": {
+    "AUTEUR": "Auteur",
+    "RETOUR": "Retour"
+  },
+  "FooterComponent": {
+    "LE_DEV_R": "Le développeur qu'il vous faut"
+  },
   "ContactPage": {
     "SEN_MESSAGE": "M'envoyer un message"
   },
