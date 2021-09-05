@@ -20,6 +20,9 @@
     "NOM": "Nom complet",
     "EMAIL": "Adresse é-mail"
   },
+  "ContactPage": {
+    "SEN_MESSAGE": "M'envoyer un message"
+  },
   "AboutPage": {
     "EDUCATION": "Education",
     "LBS": "Lycée de Bafou-Sud",

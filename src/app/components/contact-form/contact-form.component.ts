@@ -9,9 +9,9 @@ import { TranslateService } from '@ngx-translate/core';
   templateUrl: './contact-form.component.html',
   styleUrls: ['./contact-form.component.scss']
 })
-export class ContactFormComponent implements OnInit, OnChanges {
+export class ContactFormComponent implements OnInit {
   @Input()
-  title = ''
+  title = 'ContactFormComponent.ME_CONTACTER'
   message = {
     email: '',
     name: '',
@@ -25,11 +25,6 @@ export class ContactFormComponent implements OnInit, OnChanges {
   ) { }
 
   ngOnInit(): void {
-  }
-  ngOnChanges():void {
-    if(this.title == '')
-    this.translateService.get('ContactFormComponent.ME_CONTACTER')
-    .subscribe(val => this.title = val)
   }
   send(){
     this.loaderService.isLoading.next(true)

@@ -1,4 +1,4 @@
-<mat-card-title>Contactez moi</mat-card-title>
+<mat-card-title>{{ "ContactFormComponent.ME_CONTACTER" | translate}}</mat-card-title>
 <div class="mt-100"  fxLayout="row wrap" fxLayout.lt-sm="column"  fxLayoutGap="32px" fxLayoutAlign="flex-start">
   <ng-container>
     <mat-card fxFlex="0 1 calc(33.3% - 32px)" class="primary-theme my-2">
@@ -61,6 +61,6 @@
   </ng-container>
 </div>
 <div class="mt-100">
-  <app-contact-form title="M'envoyer un message"></app-contact-form>
+  <app-contact-form title="ContactPage.SEN_MESSAGE"></app-contact-form>
 </div>
 <app-footer></app-footer>

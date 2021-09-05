@@ -20,6 +20,9 @@
     "NOM": "Full name",
     "EMAIL": "E-mail adress"
   },
+  "ContactPage": {
+    "SEN_MESSAGE": "Send me a message"
+  },
   "AboutPage": {
     "EDUCATION": "Education",
     "LBS": "Bafou-Sud high school",
