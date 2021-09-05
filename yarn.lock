@@ -7160,13 +7160,6 @@ next-tick@~1.0.0:
   resolved "https://registry.yarnpkg.com/next-tick/-/next-tick-1.0.0.tgz#ca86d1fe8828169b0120208e3dc8424b9db8342c"
   integrity sha1-yobR/ogoFpsBICCOPchCS524NCw=
 
-ngx-owl-carousel-o@^6.0.0:
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/ngx-owl-carousel-o/-/ngx-owl-carousel-o-6.0.0.tgz#3b1a7c58466f76eb84e06dc233b3dee38f61a9b4"
-  integrity sha512-jD6YkQ5PLGA4quR210nfFTQYOLj8Q1FHKOSyw8ZRH2GD85ImnEuFLJ31OyfrZQjPsfV3yMsaWaj6qVFqfjJbzg==
-  dependencies:
-    tslib "^2.1.0"
-
 nice-try@^1.0.4:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/nice-try/-/nice-try-1.0.5.tgz#a3378a7696ce7d223e88fc9b764bd7ef1089e366"

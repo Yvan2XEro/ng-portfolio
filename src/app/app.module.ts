@@ -1,5 +1,4 @@
 
-import { CarouselModule } from 'ngx-owl-carousel-o';
 import { RequestInterceptor } from './shared/interceptors/request.interceptor';
 import { environment } from './../environments/environment';
 import { NgModule } from '@angular/core';
@@ -103,7 +102,6 @@ export function HttpLoaderFactory(http: HttpClient) {
     AngularFireStorageModule,
     BrowserModule,
     BrowserAnimationsModule,
-    CarouselModule,
     FlexLayoutModule,
     FormsModule,
     HTMLEscapeUnescapeModule,

@@ -1,24 +1,21 @@
 <h1>Recommandations</h1>
-<div>
-  <owl-carousel-o [options]="customOptions">
-    <ng-template carouselSlide *ngFor="let r of recommandations">
-      <div class="slide">
-          <mat-card class="primary-theme my-2 slide-item-article">
-              <mat-card-title>{{ r.name }}</mat-card-title>
-              <p class="opaque-label">__{{ r.proffession }} </p>
-          <mat-card-content>
-            <p class="text-secondary" [innerHTML]="r.message"></p>
-          </mat-card-content>
-          <mat-card-footer>
+<div class="x-scroll" fxLayout="row" >
+    <div carouselSlide *ngFor="let r of recommandations" [id]="r.id">
+        <mat-card class="primary-theme my-2 slide-item-article">
+            <mat-card-title>{{ r.name }}</mat-card-title>
+            <p class="opaque-label">__{{ r.proffession }} </p>
+        <mat-card-content>
+          <p class="text-secondary" [innerHTML]="r.message"></p>
+        </mat-card-content>
+        <mat-card-footer>
 
-          </mat-card-footer>
-      </mat-card>
-      </div>
-    </ng-template>
-  </owl-carousel-o>
-  <div class="text-rigth">
-    <button (click)="openRatingModale()" mat-mini-fab color="accent" title="Ajouter une recommandation" aria-label="Example icon button with a home icon">
-      <mat-icon>add</mat-icon>
-    </button>
-  </div>
+        </mat-card-footer>
+    </mat-card>
+    </div>
 </div>
+<div class="text-rigth">
+  <button (click)="openRatingModale()" mat-mini-fab color="accent" title="Ajouter une recommandation" aria-label="Example icon button with a home icon">
+    <mat-icon>add</mat-icon>
+  </button>
+</div>
+
