@@ -23,14 +23,14 @@
         <mat-icon color="accent">article</mat-icon>
         <textarea [(ngModel)]="message.message" class="form-control mt-2" name="message" id="" cols="30" rows="10" placeholder="Message..." required></textarea>
       </div>
-      <button [disabled]="message.message==''||message.name==''" class="app-input mt-2" type="submit">Send message</button>
+      <button [disabled]="message.message==''||message.name==''" class="app-input mt-2" type="submit">{{ "ContactFormComponent.ENVOYER" | translate}}</button>
     </form>
   </div>
   <div *ngIf="!workedWithMe" class="workedWithMe">
-    Avez vous deja eu a travailler avec Yvan? Si oui vous pouvez faire une recommandation aux autres
-    <button color="warn" mat-flat-button (click)="workedWithMe=true">
+    {{ "InputRaitingComponent.WORKED_WITH_ME" | translate}}
+    <button style="margin-top: 10px;" color="warn" mat-flat-button (click)="workedWithMe=true">
       <mat-icon>done_outline</mat-icon>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      J'ai deja eu a trvailler avec Yvan kana
+      {{ "InputRaitingComponent.WORKED_WITH_HE" | translate}}
     </button>
   </div>
 </div>

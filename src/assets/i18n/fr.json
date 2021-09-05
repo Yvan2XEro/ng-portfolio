@@ -21,6 +21,10 @@
     "PROJETS_EN_EQUIPE": "Projets en équipe",
     "PROJETS_DEPLOYEES": "Projets déployés"
   },
+  "InputRaitingComponent": {
+    "WORKED_WITH_ME" :"Avez vous deja eu à  travailler avec Yvan? Si oui vous pouvez faire une récommandation aux autres.",
+    "WORKED_WITH_HE" : "J'ai déjà eu à travailler avec Yvan Kana"
+  },
   "ContactFormComponent": {
     "ME_CONTACTER": "Me contacter",
     "ENVOYER": "Envoyer",
