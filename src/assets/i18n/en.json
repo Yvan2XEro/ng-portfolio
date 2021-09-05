@@ -14,6 +14,13 @@
     "CMR": "Cameroon",
     "MES_TECHS": "My technologies"
   },
+  "ProjectListComponent": {
+    "MES_WORKS": "My works",
+    "PROJETS_TERMINE": "Completed projects",
+    "PROJETS_PERSO": "Personal projects",
+    "PROJETS_EN_EQUIPE": "Team projects",
+    "PROJETS_DEPLOYEES": "Deployed projects"
+  },
   "ContactFormComponent": {
     "ME_CONTACTER": "contact me",
     "ENVOYER": "Send",

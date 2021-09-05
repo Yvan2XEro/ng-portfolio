@@ -14,6 +14,13 @@
     "ANS": "ans",
     "MES_TECHS": "Mes technologies"
   },
+  "ProjectListComponent": {
+    "MES_WORKS": "Mes traveaux",
+    "PROJETS_TERMINE": "Projets terminée",
+    "PROJETS_PERSO": "Projets personnels",
+    "PROJETS_EN_EQUIPE": "Projets en équipe",
+    "PROJETS_DEPLOYEES": "Projets déployés"
+  },
   "ContactFormComponent": {
     "ME_CONTACTER": "Me contacter",
     "ENVOYER": "Envoyer",
