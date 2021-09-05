@@ -1,8 +1,8 @@
-@import url('./../contact-form/contact-form.component.scss');
-.contact-block{
+@import url("./../contact-form/contact-form.component.scss");
+.contact-block {
   padding: 10px;
 }
-.select-input{
+.select-input {
   width: 100%;
 }
 .example-radio-group {
@@ -14,11 +14,18 @@
 .example-radio-button {
   margin: 5px;
 }
-.raiting-modal{
+.raiting-modal {
   position: relative;
 }
-.btn-close{
+.btn-close {
   position: absolute;
   top: 2px;
   right: 2px;
+}
+.workedWithMe {
+  width: 300px;
+  max-width: 300px;
+  min-height: 150px;
+  padding: 10px;
+  padding-top: 25px;
 }

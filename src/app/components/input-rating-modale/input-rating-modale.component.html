@@ -2,26 +2,35 @@
   <div>
     <button class="btn-close" (click)="close(false)"  mat-button color="warn"><mat-icon color="warn">close</mat-icon></button>
   </div>
-  <mat-card-title >Recommanandation</mat-card-title>
-  <app-raiting [rating]="message.stars"  [starCount]="starCount"  [color]="starColor" (ratingUpdated)="onRatingChanged($event)"></app-raiting>
-  <mat-radio-group [(ngModel)]="message.proffession">
-    <mat-radio-button value="Director">Director</mat-radio-button>
-      <mat-radio-button checked value="Devellopper">Devellopper</mat-radio-button>
-      <mat-radio-button value="Other">Other</mat-radio-button>
-  </mat-radio-group> <br> <br>
-  <form class="text-center" (ngSubmit)="send()">
-    <div class="contact-form-field">
-      <mat-icon color="accent">person_outline</mat-icon>
-      <input [(ngModel)]="message.name" class="form-control mt-2 app-input" name="name" type="text" placeholder="Your name..." required>
-    </div>
-    <div class="contact-form-field">
-      <mat-icon color="accent">alternate_email</mat-icon>
-    <input [(ngModel)]="message.email" class="form-control mt-2 app-input" name="email" type="email" placeholder="Your email adress..." required>
-    </div>
-    <div class="contact-form-field">
-      <mat-icon color="accent">article</mat-icon>
-      <textarea [(ngModel)]="message.message" class="form-control mt-2" name="message" id="" cols="30" rows="10" placeholder="Message..." required></textarea>
-    </div>
-    <button [disabled]="message.message==''||message.name==''" class="app-input mt-2" type="submit">Send message</button>
-  </form>
+  <div *ngIf="workedWithMe">
+    <mat-card-title >Recommanandation</mat-card-title>
+    <app-raiting [rating]="message.stars"  [starCount]="starCount"  [color]="starColor" (ratingUpdated)="onRatingChanged($event)"></app-raiting>
+    <mat-radio-group [(ngModel)]="message.proffession">
+      <mat-radio-button value="Director">Director</mat-radio-button>
+        <mat-radio-button checked value="Devellopper">Devellopper</mat-radio-button>
+        <mat-radio-button value="Other">Other</mat-radio-button>
+    </mat-radio-group> <br> <br>
+    <form class="text-center" (ngSubmit)="send()">
+      <div class="contact-form-field">
+        <mat-icon color="accent">person_outline</mat-icon>
+        <input [(ngModel)]="message.name" class="form-control mt-2 app-input" name="name" type="text" placeholder="Your name..." required>
+      </div>
+      <div class="contact-form-field">
+        <mat-icon color="accent">alternate_email</mat-icon>
+      <input [(ngModel)]="message.email" class="form-control mt-2 app-input" name="email" type="email" placeholder="Your email adress..." required>
+      </div>
+      <div class="contact-form-field">
+        <mat-icon color="accent">article</mat-icon>
+        <textarea [(ngModel)]="message.message" class="form-control mt-2" name="message" id="" cols="30" rows="10" placeholder="Message..." required></textarea>
+      </div>
+      <button [disabled]="message.message==''||message.name==''" class="app-input mt-2" type="submit">Send message</button>
+    </form>
+  </div>
+  <div *ngIf="!workedWithMe" class="workedWithMe">
+    Avez vous deja eu a travailler avec Yvan? Si oui vous pouvez faire une recommandation aux autres
+    <button color="warn" mat-flat-button (click)="workedWithMe=true">
+      <mat-icon>done_outline</mat-icon>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      J'ai deja eu a trvailler avec Yvan kana
+    </button>
+  </div>
 </div>

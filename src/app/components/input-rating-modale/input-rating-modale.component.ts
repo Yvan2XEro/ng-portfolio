@@ -17,6 +17,8 @@ export class InputRatingModaleComponent implements OnInit {
   starColorP:StarRatingColor = StarRatingColor.primary;
   starColorW:StarRatingColor = StarRatingColor.warn;
 
+  workedWithMe = false
+
   message = {
     email: '',
     name: '',
