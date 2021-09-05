@@ -27,7 +27,9 @@
     </form>
   </div>
   <div *ngIf="!workedWithMe" class="workedWithMe">
-    {{ "InputRaitingComponent.WORKED_WITH_ME" | translate}}
+    <mat-card-content class="text-center">
+      {{ "InputRaitingComponent.WORKED_WITH_ME" | translate}}
+    </mat-card-content>
     <button style="margin-top: 10px;" color="warn" mat-flat-button (click)="workedWithMe=true">
       <mat-icon>done_outline</mat-icon>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       {{ "InputRaitingComponent.WORKED_WITH_HE" | translate}}
