@@ -26,12 +26,12 @@ export class ProfilComponent implements OnInit {
     },
     {
       classIcon: "fab fa-facebook",
-      url: "https://github.com/Yvan2Ero",
+      url: "https://www.facebook.com/yvanjules.kana",
       title: "Facebook"
     },
     {
       classIcon: "fab fa-twitter",
-      url: "https://github.com/Yvan2Ero",
+      url: "https://twitter.com/ErocliteYvan",
       title: "Twitter"
     },
     {
