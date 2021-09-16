@@ -1,3 +1,4 @@
+import { InputRatingModaleComponent } from './components/input-rating-modale/input-rating-modale.component';
 import { Page404Component } from './pages/page404/page404.component';
 import { AdminComponent } from './pages/admin/admin.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: "about", component: AboutComponent },
   { path: "blog", component: BlogComponent, },
   { path: "blog/articles/:slug", component: ShowArticleComponent },
+  { path: "raiting-new", component: InputRatingModaleComponent },
   { path: "admin", component: AdminComponent },
   { path: "not-found", component: Page404Component },
   { path: "**", redirectTo: "not-found" },

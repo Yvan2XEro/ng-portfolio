@@ -1,8 +1,9 @@
+import { Router } from '@angular/router';
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { StarRatingColor } from './raiting/raiting.component';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { PostService } from '../../shared/services/post.service';
-import { MatDialogRef } from '@angular/material/dialog';
+// import { MatDialogRef } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-input-rating-modale',
@@ -16,9 +17,7 @@ export class InputRatingModaleComponent implements OnInit {
   starColor:StarRatingColor = StarRatingColor.accent;
   starColorP:StarRatingColor = StarRatingColor.primary;
   starColorW:StarRatingColor = StarRatingColor.warn;
-
-  workedWithMe = false
-
+  re =  /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   message = {
     email: '',
     name: '',
@@ -29,7 +28,7 @@ export class InputRatingModaleComponent implements OnInit {
   constructor(
     private snackBar : MatSnackBar,
     private postService: PostService,
-    private matDialogRef: MatDialogRef<InputRatingModaleComponent>
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -42,18 +41,15 @@ export class InputRatingModaleComponent implements OnInit {
     } else {
       this.postService.addRaiting(this.message)
       .then(()=>{
-        this.close(true)
         this.snackBar.open('Thank you!', 'close')
       })
       .catch(()=>{
         this.snackBar.open('An error occured, please try later!', 'close')
-        this.close(false)
       })
     }
 
   }
   close(response: boolean) {
-    this.matDialogRef.close(response)
   }
   onRatingChanged(rating:number){
     this.message.stars = rating;

@@ -1,4 +1,78 @@
-@import url("./../contact-form/contact-form.component.scss");
+// @import url("./../contact-form/contact-form.component.scss");
+.contact-block {
+  padding: 35px;
+  box-sizing: border-box;
+}
+
+textarea {
+  height: 150px;
+  resize: vertical;
+  padding-top: 15px;
+}
+input,
+textarea {
+  border: none;
+  border-left: solid 50px #20202a;
+  padding-left: 15px;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  box-sizing: border-box;
+  text-align: left;
+  padding-right: 15px;
+  color: #fafafc;
+  margin-bottom: 30px;
+  background: linear-gradient(159deg, #252532 0%, #23232d 100%);
+  box-shadow: inset 0 1px 4px 0 rgba(15, 15, 20, 0.1);
+  transition: 0.4s ease-in-out;
+}
+button {
+  display: block;
+  background: #f44336;
+  margin: 0;
+  color: #fff;
+  user-select: none;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  min-width: 120px;
+  line-height: 36px;
+  padding: 0 16px;
+  transition: 1s;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 0px 0px #00000033, 0px 0px 0px 0px #00000024,
+    0px 0px 0px 0px #0000001f;
+  padding-left: 2px;
+  padding-right: 2px;
+  font-size: 14px;
+  font-weight: 500;
+}
+*:focus {
+  outline: none;
+  .contact-form-field:focus {
+    color: #ff0000;
+  }
+}
+.contact-form-field {
+  position: relative;
+}
+.form-control:focus {
+  border-bottom: 0.5px solid #ff000080;
+  border-right: 0.5px solid #ff000080;
+  border-top: 0.5px solid #ff000080;
+}
+.label-mat-icon {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  font-weight: 900;
+}
+@media only screen and (max-width: 543px) {
+  .contact-block {
+    padding: 15px;
+    box-sizing: border-box;
+  }
+}
+
 .contact-block {
   padding: 10px;
 }
@@ -30,4 +104,13 @@
   min-height: 150px;
   padding: 10px;
   padding-top: 25px;
+}
+.example-radio-group {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0;
+}
+
+.example-radio-button {
+  margin: 5px;
 }
