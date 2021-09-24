@@ -11,7 +11,7 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class ContactFormComponent implements OnInit {
   @Input()
-  title = 'ContactFormComponent.ME_CONTACTER'
+  displayTitle = 'ContactFormComponent.ME_CONTACTER'
   message = {
     email: '',
     name: '',
